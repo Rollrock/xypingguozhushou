@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DataFlowViewController">
+            <connections>
+                <outlet property="flowLab" destination="eGx-WA-7jo" id="Kyd-3t-kcb"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HZT-r8-gID">
+                    <rect key="frame" x="140" y="80" width="320" height="250"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="本月已用流量(移动)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iLV-BY-c8q">
+                            <rect key="frame" x="10" y="40" width="300" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="qlR-Cp-hKM"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="298M" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eGx-WA-7jo">
+                            <rect key="frame" x="10" y="91" width="300" height="70"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="3AQ-ID-2r6"/>
+                                <constraint firstAttribute="height" constant="70" id="Txb-rI-kje"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="61"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="3AQ-ID-2r6"/>
+                                </mask>
+                            </variation>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="iLV-BY-c8q" firstAttribute="top" secondItem="HZT-r8-gID" secondAttribute="top" constant="40" id="1aM-Ma-Lf5"/>
+                        <constraint firstAttribute="height" constant="250" id="5ns-Ul-TAx"/>
+                        <constraint firstItem="eGx-WA-7jo" firstAttribute="top" secondItem="iLV-BY-c8q" secondAttribute="bottom" constant="30" id="6bT-er-djy"/>
+                        <constraint firstItem="iLV-BY-c8q" firstAttribute="leading" secondItem="HZT-r8-gID" secondAttribute="leading" constant="10" id="SdY-16-PS5"/>
+                        <constraint firstAttribute="width" constant="320" id="dzY-oD-lgR"/>
+                        <constraint firstAttribute="trailing" secondItem="iLV-BY-c8q" secondAttribute="trailing" constant="10" id="fM7-xY-AXK"/>
+                        <constraint firstItem="eGx-WA-7jo" firstAttribute="leading" secondItem="HZT-r8-gID" secondAttribute="leading" constant="10" id="pUs-yU-YDn"/>
+                        <constraint firstAttribute="trailing" secondItem="eGx-WA-7jo" secondAttribute="trailing" constant="10" id="zbP-AE-S0w"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="HZT-r8-gID" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="80" id="0fV-1s-rQE"/>
+                <constraint firstAttribute="centerX" secondItem="HZT-r8-gID" secondAttribute="centerX" id="nsr-Cz-tza"/>
+            </constraints>
+            <point key="canvasLocation" x="393" y="204"/>
+        </view>
+    </objects>
+</document>

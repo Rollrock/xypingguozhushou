@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="APPsViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="view_1" destination="lZG-RA-UeJ" id="97H-Ur-o0h"/>
+                <outlet property="view_2" destination="czG-Zy-Q4O" id="gWU-pv-Hmf"/>
+                <outlet property="view_4" destination="HoW-c0-RcN" id="UpV-y0-Lg0"/>
+                <outlet property="view_5" destination="NQJ-zl-n3a" id="q0H-Qn-EX6"/>
+                <outlet property="view_6" destination="OKW-Fh-1ll" id="dlV-ZN-Se7"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    互联网赚钱方法大全" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="czG-Zy-Q4O">
+                    <rect key="frame" x="10" y="124" width="580" height="39"/>
+                    <color key="backgroundColor" red="0.91764705879999997" green="0.50196078430000002" blue="0.062745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="39" id="er6-C9-tzQ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    账号密码管家-有效管理账号密码" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HoW-c0-RcN">
+                    <rect key="frame" x="10" y="212" width="580" height="39"/>
+                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="39" id="num-y9-sRa"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    私密相册-两套密码防检查" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="geA-fx-Euz">
+                    <rect key="frame" x="10" y="168" width="580" height="39"/>
+                    <color key="backgroundColor" red="0.6705882353" green="0.79215686269999996" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="39" id="hFh-m7-nxl"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    练出腹肌让女人投怀送抱" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NQJ-zl-n3a">
+                    <rect key="frame" x="10" y="256" width="580" height="39"/>
+                    <color key="backgroundColor" red="0.61568627450000002" green="0.42352941179999998" blue="0.85490196080000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="39" id="kFl-zR-jeQ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    帅哥美女拼图-你想不到的奖励" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OKW-Fh-1ll">
+                    <rect key="frame" x="10" y="300" width="580" height="39"/>
+                    <color key="backgroundColor" red="1" green="0.35686274509999999" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="39" id="ZYX-Nb-bTM"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="    必起闹钟-不起床就不停止的闹钟" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lZG-RA-UeJ">
+                    <rect key="frame" x="10" y="77" width="580" height="39"/>
+                    <color key="backgroundColor" red="0.0" green="0.69411764710000001" blue="0.75686274509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="39" id="dnF-0k-u7T"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="geA-fx-Euz" secondAttribute="trailing" constant="10" id="6jG-Ro-HRS"/>
+                <constraint firstAttribute="trailing" secondItem="HoW-c0-RcN" secondAttribute="trailing" constant="10" id="93p-Ps-vB2"/>
+                <constraint firstItem="lZG-RA-UeJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="Ecd-Pr-tww"/>
+                <constraint firstItem="lZG-RA-UeJ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="80" id="Fw7-Ik-jJM"/>
+                <constraint firstItem="OKW-Fh-1ll" firstAttribute="top" secondItem="NQJ-zl-n3a" secondAttribute="bottom" constant="5" id="HXl-aq-klH"/>
+                <constraint firstItem="NQJ-zl-n3a" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="KZn-0T-sby"/>
+                <constraint firstItem="HoW-c0-RcN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="Qu8-E7-KW7"/>
+                <constraint firstAttribute="trailing" secondItem="OKW-Fh-1ll" secondAttribute="trailing" constant="10" id="TXD-zb-eqr"/>
+                <constraint firstItem="NQJ-zl-n3a" firstAttribute="top" secondItem="HoW-c0-RcN" secondAttribute="bottom" constant="5" id="Xsi-jw-1Zd"/>
+                <constraint firstItem="czG-Zy-Q4O" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="ZMo-PG-e2i"/>
+                <constraint firstAttribute="trailing" secondItem="NQJ-zl-n3a" secondAttribute="trailing" constant="10" id="aeX-mh-awN"/>
+                <constraint firstItem="HoW-c0-RcN" firstAttribute="top" secondItem="geA-fx-Euz" secondAttribute="bottom" constant="5" id="bQE-sc-IUn"/>
+                <constraint firstAttribute="trailing" secondItem="czG-Zy-Q4O" secondAttribute="trailing" constant="10" id="hVz-9l-Fxe"/>
+                <constraint firstItem="geA-fx-Euz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="jSf-c6-gbI"/>
+                <constraint firstItem="geA-fx-Euz" firstAttribute="top" secondItem="czG-Zy-Q4O" secondAttribute="bottom" constant="5" id="lLi-Uh-iJX"/>
+                <constraint firstItem="OKW-Fh-1ll" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="qNQ-Ny-vJk"/>
+                <constraint firstAttribute="trailing" secondItem="lZG-RA-UeJ" secondAttribute="trailing" constant="10" id="qbO-bC-ZdP"/>
+                <constraint firstItem="czG-Zy-Q4O" firstAttribute="top" secondItem="lZG-RA-UeJ" secondAttribute="bottom" constant="5" id="zFn-lx-XMn"/>
+            </constraints>
+            <point key="canvasLocation" x="368" y="204"/>
+        </view>
+    </objects>
+</document>
