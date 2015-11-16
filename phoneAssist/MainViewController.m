@@ -45,7 +45,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    self.title = @"XY苹果助手";
+    self.title = @"手机助手";
     self.navigationController.navigationBar.barTintColor = [UIColor blackColor];
     
     UIColor *color = [UIColor whiteColor];
@@ -78,8 +78,7 @@
         
         [MobClick event:@"qianming"];
         
-        
-        return;
+         return;
     }
     
     
@@ -182,11 +181,11 @@
     }
 }
 
-
 - (NSString *)publisherId
 {
     return  BAIDU_APP_ID;
 }
+
 
 -(void)layoutADV
 {
@@ -196,7 +195,7 @@
     _baiduView.AdType = BaiduMobAdViewTypeBanner;
     _baiduView.frame = CGRectMake(0, 0, kBaiduAdViewBanner468x60.width, kBaiduAdViewBanner468x60.height);
     _baiduView.delegate = self;
-    [_advView addSubview:_baiduView];
+    [_advView2 addSubview:_baiduView];
     [_baiduView start];
 
     //底部
@@ -211,7 +210,7 @@
     _bannerView.rootViewController = self;
     [_bannerView loadRequest:[GADRequest request]];
     
-    [_advView2 addSubview:_bannerView];
+    [_advView addSubview:_bannerView];
 }
 
 -(BOOL)showApps

@@ -18,7 +18,7 @@
 
 #define SIGN_PER_SCORE    2
 
-@interface SignViewController ()<BaiduMobAdViewDelegate>
+@interface SignViewController ()<BaiduMobAdViewDelegate,UIAlertViewDelegate>
 {
     SignInfo * signInfo;
 }
@@ -51,7 +51,30 @@
         [_signBtn setTitle:@"签到" forState:UIControlStateNormal];
     }
     
-    _moneyLab.text = [NSString stringWithFormat:@"%d元",signInfo.score];
+    //搞个初始化随机数
+    if( signInfo.score == 0 )
+    {
+        //
+        int rand = arc4random() % 5;
+        if( rand == 0 )
+        {
+            signInfo.score = 48;
+        }
+        else if( rand == 1 )
+        {
+            signInfo.score = 58;
+        }
+        else if( rand == 2 )
+        {
+            signInfo.score = 38;
+        }
+        else
+        {
+            signInfo.score = 68;
+        }
+    }
+    
+    _moneyLab.text = [NSString stringWithFormat:@"%ld元",signInfo.score];
     
     //
     [self layoutADV];
@@ -101,7 +124,6 @@
     {
         signInfo = [SignInfo new];
     }
-    
 }
 
 -(void)setSignInfo
@@ -119,9 +141,7 @@
     [_signBtn setTitle:@"今日已签到" forState:UIControlStateNormal];
     
     //
-    
-    _moneyLab.text = [NSString stringWithFormat:@"%d元",signInfo.score];
-    
+    _moneyLab.text = [NSString stringWithFormat:@"%ld元",signInfo.score];
 }
 
 -(BOOL)dateSame:(NSDate*)date1 date2:(NSDate*)date2
@@ -144,7 +164,27 @@
 
 - (IBAction)ReChargeClicked
 {
-    UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"您的余额不足，充值最少需要100元" delegate:self cancelButtonTitle:@"知道了" otherButtonTitles:nil, nil];
-    [alert show];
+    if( signInfo.score < 100)
+    {
+        UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"您的余额不足，充值最少需要100元" delegate:self cancelButtonTitle:@"知道了" otherButtonTitles:nil, nil];
+        [alert show];
+    }
+    else
+    {
+        UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"充值前请先给5星+好评吧~~" delegate:self cancelButtonTitle:@"现在就去" otherButtonTitles:@"不了", nil];
+        alert.tag = 10086;
+        [alert show];
+
+    }
+    
+}
+
+#pragma UIAlertView
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if( (alertView.tag == 10086) && (buttonIndex == 0) )
+    {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:kAppStoreAddress]];
+    }
 }
 @end

@@ -364,8 +364,8 @@
                                                         <constraint firstAttribute="width" constant="40" id="sm7-fd-CU7"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="签到" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R4M-vK-UDI">
-                                                    <rect key="frame" x="70" y="22" width="22" height="149"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="签到" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R4M-vK-UDI">
+                                                    <rect key="frame" x="70" y="22" width="30" height="149"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="22" id="rFt-Ce-HhM"/>
                                                     </constraints>

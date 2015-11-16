@@ -32,11 +32,13 @@
 #define BAIDU_APP_ID @"edf2086c"
 #define BAIDU_ADV_ID  @"2066679"
 
+#define BAIDU_SPLASH_ID @"2321761"
+
 #define UM_SHARE_KEY  @"561b5f8067e58e0a5800061b"
 
 ////
-#define SHOW_APP_YEAR  2015
-#define SHOW_APP_MONTH 11
+#define SHOW_APP_YEAR  2016
+#define SHOW_APP_MONTH 12
 #define SHOW_APP_DAY   20
 
 #define DataCounterKeyWWANSent @"WWANSent"

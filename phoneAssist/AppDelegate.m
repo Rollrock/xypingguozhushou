@@ -13,8 +13,9 @@
 #import "RFRateMe.h"
 #import "UMSocial.h"
 #import "UMSocialWechatHandler.h"
+#import "BaiduMobAdSplash.h"
 
-@interface AppDelegate ()
+@interface AppDelegate ()<BaiduMobAdSplashDelegate>
 
 @end
 
@@ -23,15 +24,10 @@
 
 -(void)initControllers
 {
-    
     MainViewController * vc = [[MainViewController alloc]initWithNibName:@"MainViewController" bundle:nil];
     
     UINavigationController * nav = [[UINavigationController alloc]initWithRootViewController:vc];
     self.window.rootViewController = nav;
-    
-    
-   // [[UITabBarItem appearance] setTitleTextAttributes:@{ NSForegroundColorAttributeName : [UIColor whiteColor],NSFontAttributeName:[UIFont systemFontOfSize:17]}            forState:UIControlStateNormal];
-
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -50,7 +46,6 @@
     //设置微信AppId，设置分享url，默认使用友盟的网址
     [UMSocialWechatHandler setWXAppId:@"wx56599a0020b5efcd" appSecret:@"ff9dba284f10f9533fd3e23358f94205" url:SHARE_URL];
 
-    
     //
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     
@@ -62,9 +57,27 @@
     //
     [self.window makeKeyAndVisible];
     
+    [self showADV];
     
     return YES;
 }
+
+-(void)showADV
+{
+    // 全屏开屏
+    BaiduMobAdSplash *splash = [[BaiduMobAdSplash alloc] init];
+    splash.delegate = self;
+    splash.AdUnitTag = BAIDU_APP_ID;
+    splash.canSplashClick = YES;
+
+    [splash loadAndDisplayUsingKeyWindow:self.window];
+}
+
+- (NSString *)publisherId
+{
+    return BAIDU_SPLASH_ID;
+}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

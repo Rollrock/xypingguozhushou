@@ -95,7 +95,7 @@
             yPos += VIEW_HEIGHT+1;
             
             UILabel * lab = [[UILabel alloc]initWithFrame:CGRectMake(0, yPos, scrView.frame.size.width, VIEW_HEIGHT)];
-            lab.text = [NSString stringWithFormat:@"%@%ldX%ld像素",itemArray[index++],(long)[SystemSharedServices screenWidth],(long)[SystemSharedServices screenHeight]];
+            lab.text = [NSString stringWithFormat:@"%@%ldX%ld",itemArray[index++],(long)[SystemSharedServices screenWidth],(long)[SystemSharedServices screenHeight]];
             lab.backgroundColor = LAB_VIEW_BG_COLOR;
             lab.font = font;
             
