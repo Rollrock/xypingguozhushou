@@ -39,7 +39,7 @@
 ////
 #define SHOW_APP_YEAR  2016
 #define SHOW_APP_MONTH 12
-#define SHOW_APP_DAY   20
+#define SHOW_APP_DAY   30
 
 #define DataCounterKeyWWANSent @"WWANSent"
 #define DataCounterKeyWWANReceived   @"WWANReceived"

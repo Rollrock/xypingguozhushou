@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		481303A21BFA08E4001383DB /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 481303A01BFA08E4001383DB /* WebViewController.m */; };
+		481303A31BFA08E4001383DB /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 481303A11BFA08E4001383DB /* WebViewController.xib */; };
 		482A89F21BC785BC00377B64 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 482A89F11BC785BC00377B64 /* QuartzCore.framework */; };
 		482A89F41BC785C200377B64 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 482A89F31BC785C200377B64 /* CoreText.framework */; };
 		482A89F61BC785C700377B64 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 482A89F51BC785C700377B64 /* CoreMotion.framework */; };
@@ -159,6 +161,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4813039F1BFA08E4001383DB /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		481303A01BFA08E4001383DB /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		481303A11BFA08E4001383DB /* WebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebViewController.xib; sourceTree = "<group>"; };
 		482A89F11BC785BC00377B64 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		482A89F31BC785C200377B64 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		482A89F51BC785C700377B64 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
@@ -957,6 +962,9 @@
 				486026701BCA9F8F00919548 /* APPsViewController.h */,
 				486026711BCA9F8F00919548 /* APPsViewController.m */,
 				486026721BCA9F8F00919548 /* APPsViewController.xib */,
+				4813039F1BFA08E4001383DB /* WebViewController.h */,
+				481303A01BFA08E4001383DB /* WebViewController.m */,
+				481303A11BFA08E4001383DB /* WebViewController.xib */,
 			);
 			path = phoneAssist;
 			sourceTree = "<group>";
@@ -1074,6 +1082,7 @@
 				482A8A2B1BC7A9EB00377B64 /* NetSpeedViewController.xib in Resources */,
 				482A8A251BC7A9EB00377B64 /* SignViewController.xib in Resources */,
 				486026341BC7F67B00919548 /* qiandao.png in Resources */,
+				481303A31BFA08E4001383DB /* WebViewController.xib in Resources */,
 				485F2E101BCB9D0F005A4F2A /* UMSCommentDetailController.xib in Resources */,
 				486026321BC7F67B00919548 /* wangsu.png in Resources */,
 				485F2E091BCB9D0F005A4F2A /* ios-social-sdk-shake.html in Resources */,
@@ -1181,6 +1190,7 @@
 				482A8AE41BC7ABCF00377B64 /* SSBatteryInfo.m in Sources */,
 				486026271BC7E84200919548 /* MainViewController.m in Sources */,
 				486026401BC8ED3000919548 /* PhoneInfoViewController.m in Sources */,
+				481303A21BFA08E4001383DB /* WebViewController.m in Sources */,
 				482A8AE71BC7ABCF00377B64 /* SSHardwareInfo.m in Sources */,
 				482A8AE31BC7ABCF00377B64 /* SSApplicationInfo.m in Sources */,
 				482A8A281BC7A9EB00377B64 /* NetSpyViewController.m in Sources */,

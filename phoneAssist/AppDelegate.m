@@ -16,7 +16,9 @@
 #import "BaiduMobAdSplash.h"
 
 @interface AppDelegate ()<BaiduMobAdSplashDelegate>
-
+{
+    BaiduMobAdSplash *splash;
+}
 @end
 
 @implementation AppDelegate
@@ -54,20 +56,20 @@
     
     [RFRateMe showRateAlertAfterTimesOpened:3];
     
+    
     //
     [self.window makeKeyAndVisible];
     
     [self showADV];
-    
     return YES;
 }
 
 -(void)showADV
 {
     // 全屏开屏
-    BaiduMobAdSplash *splash = [[BaiduMobAdSplash alloc] init];
+    splash = [[BaiduMobAdSplash alloc] init];
     splash.delegate = self;
-    splash.AdUnitTag = BAIDU_APP_ID;
+    splash.AdUnitTag = BAIDU_SPLASH_ID;
     splash.canSplashClick = YES;
 
     [splash loadAndDisplayUsingKeyWindow:self.window];
@@ -75,7 +77,7 @@
 
 - (NSString *)publisherId
 {
-    return BAIDU_SPLASH_ID;
+    return BAIDU_APP_ID;
 }
 
 

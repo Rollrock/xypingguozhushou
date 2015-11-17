@@ -20,6 +20,7 @@
 #import "DiskViewController.h"
 #import "APPsViewController.h"
 #import "MobClick.h"
+#import "WebViewController.h"
 
 @import GoogleMobileAds;
 
@@ -166,6 +167,7 @@
     pt = [t locationInView:_view_9];
     if( CGRectContainsPoint(_view_9.bounds, pt) )
     {
+        /*
         if(![self showApps] )
         {
             return;
@@ -176,6 +178,17 @@
         [self.navigationController pushViewController:vc animated:YES];
         
         [MobClick event:@"tuijie"];
+        */
+        
+        if(![self showApps] )
+        {
+            return;
+        }
+ 
+        
+        WebViewController * vc = [[WebViewController alloc]initWithNibName:@"WebViewController" bundle:nil];
+        [self.navigationController pushViewController:vc animated:YES];
+        
         
         return;
     }
