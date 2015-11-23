@@ -24,7 +24,7 @@
 - (NSString *)publisherId;
 
 /**
- * 广告位id
+ * 代码位id
  */
 - (NSString *)apId;
 

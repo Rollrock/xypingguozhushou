@@ -9,6 +9,20 @@
 #import <Foundation/Foundation.h>
 
 #import "BaiduMobAdView.h"
+#import "CommData.h"
+
+
+@interface NewsInfo : NSObject
+
+@property(copy,nonatomic) NSString * type;
+@property(copy,nonatomic) NSString * title;
+@property(copy,nonatomic) NSMutableArray * imgArray;
+
+-(void)fromDict:(NSDictionary*)dict;
+@end
+
+
+
 
 @interface CommInfo : NSObject
 

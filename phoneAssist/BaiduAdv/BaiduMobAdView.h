@@ -5,7 +5,7 @@
 //  Created by jaygao on 11-9-6.
 //  Copyright 2011年 Baidu. All rights reserved.
 //
-//  Baidu Mobads SDK Version 3.0
+//  Baidu Mobads SDK Version 3.1
 //
 
 #import <UIKit/UIKit.h>
@@ -63,7 +63,7 @@ typedef enum _BaiduMobAdViewType {
 @property (nonatomic) BaiduMobAdViewType AdType;
 
 /**
- *  设置/获取广告位id
+ *  设置/获取代码位id
  */
 @property (nonatomic,copy) NSString* AdUnitTag;
 

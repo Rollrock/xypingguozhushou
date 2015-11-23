@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
@@ -300,8 +300,8 @@
                                                         <constraint firstAttribute="height" constant="40" id="v8C-Sy-QQZ"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="手机信息" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ndd-el-dT9">
-                                                    <rect key="frame" x="70" y="0.0" width="20" height="193"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="手机信息" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ndd-el-dT9">
+                                                    <rect key="frame" x="68" y="0.0" width="20" height="193"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="20" id="N5W-5Q-hz7"/>
                                                     </constraints>
@@ -331,17 +331,29 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sku-jx-ZaN">
                                             <rect key="frame" x="402" y="407" width="193" height="193"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="im6-Ca-xi3">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="news.png" translatesAutoresizingMaskIntoConstraints="NO" id="im6-Ca-xi3">
                                                     <rect key="frame" x="10" y="76" width="40" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="40" id="W4j-fr-Ycb"/>
                                                         <constraint firstAttribute="height" constant="40" id="uN9-dV-axU"/>
                                                     </constraints>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="手机技巧" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbG-Ja-YgB">
+                                                    <rect key="frame" x="60" y="0.0" width="20" height="193"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="20" id="4CS-tU-Slr"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" red="0.0" green="0.50196078431372548" blue="0.6705882352941176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
+                                                <constraint firstItem="xbG-Ja-YgB" firstAttribute="leading" secondItem="im6-Ca-xi3" secondAttribute="trailing" constant="10" id="1ft-Os-6tB"/>
                                                 <constraint firstAttribute="centerY" secondItem="im6-Ca-xi3" secondAttribute="centerY" id="Jmf-Dp-qeC"/>
+                                                <constraint firstAttribute="bottom" secondItem="xbG-Ja-YgB" secondAttribute="bottom" id="TLV-Nt-JgB"/>
+                                                <constraint firstItem="xbG-Ja-YgB" firstAttribute="top" secondItem="sku-jx-ZaN" secondAttribute="top" id="Tqz-AY-MjG"/>
                                                 <constraint firstItem="im6-Ca-xi3" firstAttribute="leading" secondItem="sku-jx-ZaN" secondAttribute="leading" constant="10" id="v2R-Tw-nIq"/>
                                                 <constraint firstAttribute="width" secondItem="sku-jx-ZaN" secondAttribute="height" multiplier="1:1" id="w2O-XN-PP0"/>
                                                 <constraint firstAttribute="height" constant="95" id="w96-18-voa"/>
@@ -485,6 +497,7 @@
         <image name="dianchi.png" width="64" height="64"/>
         <image name="liuliang.png" width="64" height="64"/>
         <image name="neicun.png" width="64" height="64"/>
+        <image name="news.png" width="64" height="64"/>
         <image name="qiandao.png" width="64" height="64"/>
         <image name="wangluo.png" width="64" height="64"/>
         <image name="wangsu.png" width="64" height="64"/>

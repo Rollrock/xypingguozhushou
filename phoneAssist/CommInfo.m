@@ -8,6 +8,48 @@
 
 #import "CommInfo.h"
 
+/*
+ 
+ {
+ "array": [
+ {
+ "type": "A",
+ "title": "测试测试测试",
+ "imgArray": [
+ {
+ "imgUrl": ""
+ }
+ ]
+ }
+ ]
+ }
+ 
+ */
+
+
+@implementation NewsInfo
+-(void)fromDict:(NSDictionary*)dict
+{
+    self.type = dict[@"type"];
+    self.title = dict[@"title"];
+    
+    self.imgArray = [NSMutableArray new];
+    
+    NSArray * array = dict[@"imgArray"];
+    
+    if( !array ) return;
+    
+    for(NSDictionary * d in array )
+    {
+        NSString * url = d[@"imgUrl"];
+        [self.imgArray addObject:url];
+    }
+    
+}
+@end
+
+////
+
 @implementation CommInfo
 
 @end

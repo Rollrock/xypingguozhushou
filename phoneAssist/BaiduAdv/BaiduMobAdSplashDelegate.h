@@ -36,6 +36,11 @@
 - (void)splashlFailPresentScreen:(BaiduMobAdSplash *)splash withError:(BaiduMobFailReason) reason;
 
 /**
+ *  广告被点击
+ */
+- (void)splashDidClicked:(BaiduMobAdSplash *)splash;
+
+/**
  *  广告展示结束
  */
 - (void)splashDidDismissScreen:(BaiduMobAdSplash *)splash;

@@ -19,7 +19,7 @@
 
 
 /**
- *  设置/获取广告位id
+ *  设置/获取代码位id
  */
 @property (nonatomic,copy) NSString* AdUnitTag;
 
@@ -29,9 +29,9 @@
 @property (nonatomic) BOOL canSplashClick;
 
 /**
- *  设置开屏广告是否实时请求的属性，默认值为使用缓存广告，不实时请求。
+ *  设置开屏广告是否实时请求的属性（已废弃）
  */
-@property (nonatomic) BOOL useCache;
+@property (nonatomic) BOOL useCache  DEPRECATED_ATTRIBUTE;
 
 /**
  *  设置开屏广告的背景色。

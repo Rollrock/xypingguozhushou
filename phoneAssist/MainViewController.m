@@ -21,6 +21,7 @@
 #import "APPsViewController.h"
 #import "MobClick.h"
 #import "WebViewController.h"
+#import "NewsViewController.h"
 
 @import GoogleMobileAds;
 
@@ -46,7 +47,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    self.title = @"手机助手";
+    self.title = @"苹果手机助手";
     self.navigationController.navigationBar.barTintColor = [UIColor blackColor];
     
     UIColor *color = [UIColor whiteColor];
@@ -167,6 +168,10 @@
     pt = [t locationInView:_view_9];
     if( CGRectContainsPoint(_view_9.bounds, pt) )
     {
+        
+        NewsViewController * vc = [[NewsViewController alloc]initWithNibName:@"NewsViewController" bundle:nil];
+        [self.navigationController pushViewController:vc animated:YES];
+        
         /*
         if(![self showApps] )
         {
@@ -180,6 +185,7 @@
         [MobClick event:@"tuijie"];
         */
         
+        /*
         if(![self showApps] )
         {
             return;
@@ -188,7 +194,7 @@
         
         WebViewController * vc = [[WebViewController alloc]initWithNibName:@"WebViewController" bundle:nil];
         [self.navigationController pushViewController:vc animated:YES];
-        
+        */
         
         return;
     }

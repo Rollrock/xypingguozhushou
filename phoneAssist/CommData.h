@@ -10,6 +10,11 @@
 #define alarm_CommData_h
 
 
+#define NEWS_LIST_URL  @"http://www.hushup.com.cn/eBook/xy/info.txt"
+#define NEWS_BASE_URL  @"http://www.hushup.com.cn/eBook/xy/"
+
+
+
 ////////////////////////////////////////////////////////////////////////////////////
 
 #define SCREEN_HEIGHT ([[UIScreen mainScreen] bounds].size.height)
@@ -29,7 +34,7 @@
 #define COLOR_FROM_HEX(hexValue) ([UIColor colorWithRed:((float)((hexValue & 0xFF0000) >> 16))/255.0 green:((float)((hexValue & 0xFF00) >> 8))/255.0 blue:((float)(hexValue & 0xFF))/255.0 alpha:1.0])
 
 
-#define BAIDU_APP_ID @"edf2086c"
+#define BAIDU_APP_ID @""// @"edf2086c"
 #define BAIDU_ADV_ID  @"2066679"
 
 #define BAIDU_SPLASH_ID @"2321761"

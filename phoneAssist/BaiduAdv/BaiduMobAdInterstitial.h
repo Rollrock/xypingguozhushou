@@ -40,7 +40,7 @@ typedef enum _BaiduMobAdInterstitialType {
 @property (nonatomic) BOOL isReady;
 
 /**
- *  设置/获取广告位id
+ *  设置/获取代码位id
  */
 @property (nonatomic,copy) NSString* AdUnitTag;
 

@@ -5,7 +5,7 @@
 //  Created by jaygao on 11-9-8.
 //  Copyright 2011年 Baidu. All rights reserved.
 //
-//  Baidu Mobads SDK Version 3.0
+//  Baidu Mobads SDK Version 3.1
 //
 
 #import "BaiduMobAdCommonConfig.h"
