@@ -29,4 +29,14 @@
     // Configure the view for the selected state
 }
 
+-(void)refreshCell:(NewsInfo*)info
+{
+    _titleLab.text = info.title;
+    
+    [_imgView1 sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",NEWS_BASE_URL,info.imgArray[0]]] placeholderImage:nil];
+    [_imgView2 sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",NEWS_BASE_URL,info.imgArray[1]]] placeholderImage:nil];
+    [_imgView3 sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",NEWS_BASE_URL,info.imgArray[2]]] placeholderImage:nil];
+}
+
+
 @end

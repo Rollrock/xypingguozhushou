@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CommInfo.h"
 
 @interface NewsDetailViewController : UIViewController
 
+@property(copy,nonatomic) NewsInfo * info;
 @end

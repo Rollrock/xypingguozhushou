@@ -23,7 +23,6 @@
  }
  ]
  }
- 
  */
 
 
@@ -32,6 +31,7 @@
 {
     self.type = dict[@"type"];
     self.title = dict[@"title"];
+    self.src = dict[@"src"];
     
     self.imgArray = [NSMutableArray new];
     
@@ -46,6 +46,18 @@
     }
     
 }
+
+-(id)copyWithZone:(NSZone *)zone
+{
+    NewsInfo * i = [[NewsInfo allocWithZone:zone]init];
+    i.type = self.type;
+    i.src = self.src;
+    i.title = self.title;
+    i.imgArray = self.imgArray;
+    
+    return i;
+}
+
 @end
 
 ////

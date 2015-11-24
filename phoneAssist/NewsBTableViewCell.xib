@@ -15,10 +15,10 @@
                 <rect key="frame" x="0.0" y="0.0" width="364" height="52"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iKl-8O-tvp">
-                        <rect key="frame" x="8" y="8" width="357" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iKl-8O-tvp">
+                        <rect key="frame" x="8" y="8" width="348" height="40"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="21" id="Ncw-yZ-ZFe"/>
+                            <constraint firstAttribute="height" constant="40" id="Ncw-yZ-ZFe"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -35,7 +35,7 @@
             <connections>
                 <outlet property="titleLab" destination="iKl-8O-tvp" id="zX9-ZO-KrZ"/>
             </connections>
-            <point key="canvasLocation" x="718" y="289.5"/>
+            <point key="canvasLocation" x="383" y="234.5"/>
         </tableViewCell>
     </objects>
 </document>

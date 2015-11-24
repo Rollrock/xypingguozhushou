@@ -13,7 +13,7 @@
 #import "JSONKit.h"
 #import "CommInfo.h"
 #import "NewsDetailViewController.h"
-
+#import "SVProgressHUD.h"
 
 @interface NewsViewController ()<UITableViewDataSource,UITableViewDelegate>
 {
@@ -38,8 +38,18 @@
     
     //
     [self startDownLoad:NEWS_LIST_URL];
+    //
+    
+    UIBarButtonItem * leftBtn = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"NavBack"] style:UIBarButtonItemStyleDone target:self action:@selector(leftClicked)];
+    [self.navigationItem setLeftBarButtonItem:leftBtn];
+    
+    self.title = @"苹果使用技巧";
 }
 
+-(void)leftClicked
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
 #pragma UITableView
 
@@ -50,33 +60,51 @@
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
-    static NSString * cellAID = @"NewsATableViewCell";
-    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellAID];
-    
-    if( !cell )
-    {
-        cell = [[[NSBundle mainBundle] loadNibNamed:cellAID owner:self options:nil]lastObject];
-    }
-    
+    UITableViewCell * cell = nil;
     
     NewsInfo * info = self.dataArray[indexPath.row];
     if( [info.type isEqualToString:@"A"])
     {
+        static NSString * cellID = @"NewsATableViewCell";
+        cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+        
+        if( !cell )
+        {
+            cell = [[[NSBundle mainBundle] loadNibNamed:cellID owner:self options:nil]lastObject];
+        }
+        
         [((NewsATableViewCell*)cell) refreshCell:(NewsInfo*)info];
     }
     else if( [info.type isEqualToString:@"B"])
     {
-        [((NewsATableViewCell*)cell) refreshCell:(NewsInfo*)info];
+        static NSString * cellID = @"NewsBTableViewCell";
+        cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+        
+        if( !cell )
+        {
+            cell = [[[NSBundle mainBundle] loadNibNamed:cellID owner:self options:nil]lastObject];
+        }
+        
+        [((NewsBTableViewCell*)cell) refreshCell:(NewsInfo*)info];
     }
     else if( [info.type isEqualToString:@"C"])
     {
-        [((NewsATableViewCell*)cell) refreshCell:(NewsInfo*)info];
+        static NSString * cellID = @"NewsCTableViewCell";
+        cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+        
+        if( !cell )
+        {
+            cell = [[[NSBundle mainBundle] loadNibNamed:cellID owner:self options:nil]lastObject];
+        }
+        
+        [((NewsCTableViewCell*)cell) refreshCell:(NewsInfo*)info];
     }
     else
     {
         
     }
+    
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     return cell;
 }
@@ -89,12 +117,15 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-   // NSString * s = ((NewsBaseInfo*)(self.dataArray[indexPath.row])).type;
+    NewsInfo * info  = (self.dataArray[indexPath.row]);
+    
+    NewsDetailViewController * vc = [[NewsDetailViewController alloc]initWithNibName:@"NewsDetailViewController" bundle:nil];
+    vc.info = info;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 
 #pragma System
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -108,10 +139,11 @@
     //
     request = [[NSURLRequest alloc]initWithURL:[NSURL URLWithString:strUrl]];
     conn = [[NSURLConnection alloc]initWithRequest:request delegate:self startImmediately:YES];
+    
+    [SVProgressHUD showInfoWithStatus:@"信息拉取中..."];
 }
 
 #pragma
-
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
 {
     NSLog(@"didReceiveData");
@@ -122,10 +154,20 @@
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
 {
     NSLog(@"didFailWithError:%@-%@",error,error.description);
+    
+    [SVProgressHUD showErrorWithStatus:@"信息拉取失败，请稍后再试！"];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 1*NSEC_PER_SEC), dispatch_get_main_queue(), ^(void){
+        
+        [SVProgressHUD dismiss];
+        [self.navigationController popViewControllerAnimated:YES];
+    });
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
+    [SVProgressHUD dismiss];
+    
     NSString * str = [[NSString alloc]initWithData:bookData encoding:NSUTF8StringEncoding];
     NSDictionary * dict = [str objectFromJSONString];
     

@@ -225,7 +225,7 @@
     pt = CGPointMake(0, 0);
     GADBannerView * _bannerView = [[GADBannerView alloc] initWithAdSize:kGADAdSizeFullBanner origin:pt];
     
-    _bannerView.adUnitID = @"ca-app-pub-3058205099381432/9039242741";//调用你的id
+    _bannerView.adUnitID = ADMOB_ADV_ID;
     _bannerView.rootViewController = self;
     [_bannerView loadRequest:[GADRequest request]];
     
@@ -258,15 +258,5 @@
     return NO;
 }
 
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

@@ -177,7 +177,7 @@ static const CGFloat SVProgressHUDUndefinedProgress = -1;
 
 + (void)showInfoWithStatus:(NSString *)string {
     [self sharedView];
-    [self showInfoWithStatus:string maskType:SVProgressHUDMaskTypeGradient];
+    [self showInfoWithStatus:string maskType:SVProgressHUDMaskTypeNone];
 }
 
 + (void)showInfoWithStatus:(NSString *)string maskType:(SVProgressHUDMaskType)maskType {

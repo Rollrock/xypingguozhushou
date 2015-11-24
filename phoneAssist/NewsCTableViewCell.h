@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CommInfo.h"
 
 @interface NewsCTableViewCell : UITableViewCell
+-(void)refreshCell:(NewsInfo*)info;
 
 @end

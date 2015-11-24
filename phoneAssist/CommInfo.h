@@ -10,13 +10,15 @@
 
 #import "BaiduMobAdView.h"
 #import "CommData.h"
+#import "UIImageView+WebCache.h"
 
 
-@interface NewsInfo : NSObject
+@interface NewsInfo : NSObject<NSCopying>
 
 @property(copy,nonatomic) NSString * type;
 @property(copy,nonatomic) NSString * title;
-@property(copy,nonatomic) NSMutableArray * imgArray;
+@property(copy,nonatomic) NSString * src;
+@property(strong,nonatomic) NSMutableArray * imgArray;
 
 -(void)fromDict:(NSDictionary*)dict;
 @end

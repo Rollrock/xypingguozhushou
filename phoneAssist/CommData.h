@@ -39,6 +39,8 @@
 
 #define BAIDU_SPLASH_ID @"2321761"
 
+#define ADMOB_ADV_ID @""//@"ca-app-pub-3058205099381432/9039242741"
+
 #define UM_SHARE_KEY  @"561b5f8067e58e0a5800061b"
 
 ////

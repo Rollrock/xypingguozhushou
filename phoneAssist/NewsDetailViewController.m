@@ -9,6 +9,7 @@
 #import "NewsDetailViewController.h"
 
 @interface NewsDetailViewController ()
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
 
 @end
 
@@ -17,7 +18,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    NSURL * url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",NEWS_BASE_URL,_info.src]];
+    NSURLRequest * req = [NSURLRequest requestWithURL:url];
+    
+    [_webView loadRequest:req];
+    
+    UIBarButtonItem * leftBtn = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"NavBack"] style:UIBarButtonItemStyleDone target:self action:@selector(leftClicked)];
+    [self.navigationItem setLeftBarButtonItem:leftBtn];
+    
 }
+
+-(void)leftClicked
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
