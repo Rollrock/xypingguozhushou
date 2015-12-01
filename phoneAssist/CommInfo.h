@@ -18,7 +18,7 @@
 @property(copy,nonatomic) NSString * type;
 @property(copy,nonatomic) NSString * title;
 @property(copy,nonatomic) NSString * src;
-@property(strong,nonatomic) NSMutableArray * imgArray;
+//@property(strong,nonatomic) NSMutableArray * imgArray;
 
 -(void)fromDict:(NSDictionary*)dict;
 @end

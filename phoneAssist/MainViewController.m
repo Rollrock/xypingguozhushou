@@ -208,7 +208,7 @@
 
 -(void)layoutADV
 {
-   //顶部
+   //
     BaiduMobAdView * _baiduView = [[BaiduMobAdView alloc]init];
     _baiduView.AdUnitTag = BAIDU_ADV_ID;
     _baiduView.AdType = BaiduMobAdViewTypeBanner;
@@ -217,9 +217,9 @@
     [_advView2 addSubview:_baiduView];
     [_baiduView start];
 
-    //底部
+    //
     
-    //中间的 ADV
+    //
     CGPoint pt ;
     
     pt = CGPointMake(0, 0);

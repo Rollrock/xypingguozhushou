@@ -35,19 +35,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    
-    [MobClick startWithAppkey:UM_SHARE_KEY reportPolicy:BATCH   channelId:@""];
-    [UMSocialData setAppKey:UM_SHARE_KEY];
-        
-    //打开调试log的开关
-    [UMSocialData openLog:YES];
-    
-    //如果你要支持不同的屏幕方向，需要这样设置，否则在iPhone只支持一个竖屏方向
-    [UMSocialConfig setSupportedInterfaceOrientations:UIInterfaceOrientationMaskAll];
-    
-    //设置微信AppId，设置分享url，默认使用友盟的网址
-    [UMSocialWechatHandler setWXAppId:@"wx56599a0020b5efcd" appSecret:@"ff9dba284f10f9533fd3e23358f94205" url:SHARE_URL];
-
     //
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     

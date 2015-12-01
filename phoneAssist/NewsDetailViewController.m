@@ -19,7 +19,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    NSURL * url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",NEWS_BASE_URL,_info.src]];
+    NSURL * url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@/index.html",NEWS_BASE_URL,_info.src]];
     NSURLRequest * req = [NSURLRequest requestWithURL:url];
     
     [_webView loadRequest:req];

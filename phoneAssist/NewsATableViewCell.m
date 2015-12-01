@@ -32,7 +32,7 @@
 {
     _titleLab.text = info.title;
     
-    NSString * strUrl = [NSString stringWithFormat:@"%@%@",NEWS_BASE_URL,info.imgArray[0]];
+    NSString * strUrl = [NSString stringWithFormat:@"%@%@/1.jpg",NEWS_BASE_URL,info.src];
     
     [_imgView sd_setImageWithURL:[NSURL URLWithString:strUrl] placeholderImage:nil];
 }

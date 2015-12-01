@@ -33,6 +33,7 @@
     self.title = dict[@"title"];
     self.src = dict[@"src"];
     
+    /*
     self.imgArray = [NSMutableArray new];
     
     NSArray * array = dict[@"imgArray"];
@@ -44,7 +45,7 @@
         NSString * url = d[@"imgUrl"];
         [self.imgArray addObject:url];
     }
-    
+    */
 }
 
 -(id)copyWithZone:(NSZone *)zone
@@ -53,7 +54,7 @@
     i.type = self.type;
     i.src = self.src;
     i.title = self.title;
-    i.imgArray = self.imgArray;
+    //i.imgArray = self.imgArray;
     
     return i;
 }

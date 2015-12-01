@@ -33,9 +33,9 @@
 {
     _titleLab.text = info.title;
     
-    [_imgView1 sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",NEWS_BASE_URL,info.imgArray[0]]] placeholderImage:nil];
-    [_imgView2 sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",NEWS_BASE_URL,info.imgArray[1]]] placeholderImage:nil];
-    [_imgView3 sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",NEWS_BASE_URL,info.imgArray[2]]] placeholderImage:nil];
+    [_imgView1 sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@/1.jpg",NEWS_BASE_URL,info.src]] placeholderImage:nil];
+    [_imgView2 sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@/2.jpg",NEWS_BASE_URL,info.src]] placeholderImage:nil];
+    [_imgView3 sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@/3.jpg",NEWS_BASE_URL,info.src]] placeholderImage:nil];
 }
 
 
