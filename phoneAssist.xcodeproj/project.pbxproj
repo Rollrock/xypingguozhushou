@@ -91,6 +91,7 @@
 		482A8B331BC7BAEE00377B64 /* batteryBg.png in Resources */ = {isa = PBXBuildFile; fileRef = 482A8B311BC7BAEE00377B64 /* batteryBg.png */; };
 		48438C7C1C02FC9F00F5947F /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48438C7A1C02FC9E00F5947F /* NewsViewController.m */; };
 		48438C7D1C02FC9F00F5947F /* NewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48438C7B1C02FC9E00F5947F /* NewsViewController.xib */; };
+		4858B22C1C1A4850003F6809 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4858B22B1C1A4850003F6809 /* libz.tbd */; };
 		485F2DD51BCB955C005A4F2A /* libMobClickLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 485F2DD21BCB955C005A4F2A /* libMobClickLibrary.a */; };
 		485F2E081BCB9D0F005A4F2A /* libSocialSina.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 485F2DDC1BCB9D0F005A4F2A /* libSocialSina.a */; };
 		485F2E091BCB9D0F005A4F2A /* ios-social-sdk-shake.html in Resources */ = {isa = PBXBuildFile; fileRef = 485F2DE11BCB9D0F005A4F2A /* ios-social-sdk-shake.html */; };
@@ -328,6 +329,7 @@
 		48438C791C02FC9E00F5947F /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
 		48438C7A1C02FC9E00F5947F /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
 		48438C7B1C02FC9E00F5947F /* NewsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsViewController.xib; sourceTree = "<group>"; };
+		4858B22B1C1A4850003F6809 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		485F2DD21BCB955C005A4F2A /* libMobClickLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobClickLibrary.a; sourceTree = "<group>"; };
 		485F2DD31BCB955C005A4F2A /* MobClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClick.h; sourceTree = "<group>"; };
 		485F2DD41BCB955C005A4F2A /* MobClickSocialAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClickSocialAnalytics.h; sourceTree = "<group>"; };
@@ -477,44 +479,45 @@
 			buildActionMask = 2147483647;
 			files = (
 				48C037F71C030517003C2C29 /* WebKit.framework in Frameworks */,
+				482A8A041BC785F400377B64 /* CoreGraphics.framework in Frameworks */,
+				482A8A021BC785EE00377B64 /* Foundation.framework in Frameworks */,
+				482A8A001BC785E700377B64 /* UIKit.framework in Frameworks */,
+				482A8AFC1BC7ACC400377B64 /* SystemConfiguration.framework in Frameworks */,
+				482A89FA1BC785D300377B64 /* CoreTelephony.framework in Frameworks */,
+				482A8AF31BC7AC9600377B64 /* CoreLocation.framework in Frameworks */,
+				482A8B001BC7ACFC00377B64 /* MessageUI.framework in Frameworks */,
+				482A8B0C1BC7AD2D00377B64 /* AVFoundation.framework in Frameworks */,
+				482A8B121BC7AD5000377B64 /* MediaPlayer.framework in Frameworks */,
+				482A89F61BC785C700377B64 /* CoreMotion.framework in Frameworks */,
+				482A89FE1BC785E000377B64 /* AudioToolbox.framework in Frameworks */,
+				4858B22C1C1A4850003F6809 /* libz.tbd in Frameworks */,
+				482A8AFE1BC7ACF100377B64 /* StoreKit.framework in Frameworks */,
+				482A8B0E1BC7AD3700377B64 /* AdSupport.framework in Frameworks */,
+				482A89F81BC785CC00377B64 /* Security.framework in Frameworks */,
+				482A89F21BC785BC00377B64 /* QuartzCore.framework in Frameworks */,
 				482A8B1A1BC7AD9400377B64 /* libz.dylib in Frameworks */,
 				482A8B181BC7AD8E00377B64 /* libstdc++.dylib in Frameworks */,
-				482A8A041BC785F400377B64 /* CoreGraphics.framework in Frameworks */,
 				482A8B161BC7AD8200377B64 /* libiconv.dylib in Frameworks */,
-				482A89F81BC785CC00377B64 /* Security.framework in Frameworks */,
 				482A89FC1BC785D900377B64 /* ExternalAccessory.framework in Frameworks */,
 				482A89F41BC785C200377B64 /* CoreText.framework in Frameworks */,
 				485F2E0E1BCB9D0F005A4F2A /* libUMSocial_Sdk_4.2.3.a in Frameworks */,
 				482A8B141BC7AD5500377B64 /* GameController.framework in Frameworks */,
-				482A8B121BC7AD5000377B64 /* MediaPlayer.framework in Frameworks */,
-				482A89F61BC785C700377B64 /* CoreMotion.framework in Frameworks */,
-				482A8A021BC785EE00377B64 /* Foundation.framework in Frameworks */,
 				482A8B101BC7AD3E00377B64 /* libsqlite3.dylib in Frameworks */,
-				482A8B0E1BC7AD3700377B64 /* AdSupport.framework in Frameworks */,
-				482A8B0C1BC7AD2D00377B64 /* AVFoundation.framework in Frameworks */,
 				482A8B0A1BC7AD2800377B64 /* CoreAudio.framework in Frameworks */,
 				485F2DD51BCB955C005A4F2A /* libMobClickLibrary.a in Frameworks */,
 				482A8B081BC7AD2000377B64 /* CoreMedia.framework in Frameworks */,
-				482A89FA1BC785D300377B64 /* CoreTelephony.framework in Frameworks */,
 				482A8B061BC7AD0B00377B64 /* EventKitUI.framework in Frameworks */,
 				482A8B041BC7AD0600377B64 /* EventKit.framework in Frameworks */,
 				485F2E0A1BCB9D0F005A4F2A /* libUMSocial_Sdk_ScreenShot_1.0.a in Frameworks */,
 				482A8B021BC7AD0000377B64 /* MapKit.framework in Frameworks */,
-				482A8B001BC7ACFC00377B64 /* MessageUI.framework in Frameworks */,
-				482A89F21BC785BC00377B64 /* QuartzCore.framework in Frameworks */,
 				485F2E0C1BCB9D0F005A4F2A /* libWeChatSDK.a in Frameworks */,
 				485F2E0F1BCB9D0F005A4F2A /* libUMSocial_Sdk_Comment_4.2.3.a in Frameworks */,
-				482A8AFE1BC7ACF100377B64 /* StoreKit.framework in Frameworks */,
-				482A8AFC1BC7ACC400377B64 /* SystemConfiguration.framework in Frameworks */,
 				482A8AFA1BC7ACBE00377B64 /* libz.1.2.5.dylib in Frameworks */,
 				482A8AF81BC7ACB400377B64 /* AddressBookUI.framework in Frameworks */,
 				485F2E081BCB9D0F005A4F2A /* libSocialSina.a in Frameworks */,
 				482A8AF71BC7ACAE00377B64 /* AddressBook.framework in Frameworks */,
-				482A8AF31BC7AC9600377B64 /* CoreLocation.framework in Frameworks */,
 				485F2E0B1BCB9D0F005A4F2A /* libSocialWechat.a in Frameworks */,
-				482A8A001BC785E700377B64 /* UIKit.framework in Frameworks */,
 				482A8A451BC7AA5800377B64 /* GoogleMobileAds.framework in Frameworks */,
-				482A89FE1BC785E000377B64 /* AudioToolbox.framework in Frameworks */,
 				482A8A491BC7AA5800377B64 /* libBaiduMobAdSdk64bit.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -929,6 +932,7 @@
 		48BD7C261BBABC1700064FCE = {
 			isa = PBXGroup;
 			children = (
+				4858B22B1C1A4850003F6809 /* libz.tbd */,
 				48C037F61C030517003C2C29 /* WebKit.framework */,
 				482A8B191BC7AD9400377B64 /* libz.dylib */,
 				482A8B171BC7AD8E00377B64 /* libstdc++.dylib */,
@@ -1526,7 +1530,10 @@
 					"$(PROJECT_DIR)/phoneAssist/UMAnalytics_Sdk_3.5.10",
 					"$(PROJECT_DIR)/phoneAssist/UMAnalytics_Sdk_3.6.4",
 				);
-				OTHER_LDFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-Objc",
+					"-lstdc++",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -1555,7 +1562,10 @@
 					"$(PROJECT_DIR)/phoneAssist/UMAnalytics_Sdk_3.5.10",
 					"$(PROJECT_DIR)/phoneAssist/UMAnalytics_Sdk_3.6.4",
 				);
-				OTHER_LDFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-Objc",
+					"-lstdc++",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
