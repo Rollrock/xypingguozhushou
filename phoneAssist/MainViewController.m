@@ -39,6 +39,11 @@
 @property (weak, nonatomic) IBOutlet UIView *advView;
 @property (weak, nonatomic) IBOutlet UIView *advView2;
 
+@property (weak, nonatomic) IBOutlet UILabel *appLab;
+
+@property (weak, nonatomic) IBOutlet UIImageView *appImg;
+
+
 @end
 
 @implementation MainViewController
@@ -57,6 +62,12 @@
 
     //
     [self layoutADV];
+    
+    if(![self showApps] )
+    {
+        _appImg.hidden = YES;
+        _appLab.hidden = YES;
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -168,11 +179,12 @@
     pt = [t locationInView:_view_9];
     if( CGRectContainsPoint(_view_9.bounds, pt) )
     {
-        
+        /*
         NewsViewController * vc = [[NewsViewController alloc]initWithNibName:@"NewsViewController" bundle:nil];
         [self.navigationController pushViewController:vc animated:YES];
+        */
         
-        /*
+        
         if(![self showApps] )
         {
             return;
@@ -182,8 +194,6 @@
         APPsViewController * vc = [[APPsViewController alloc]initWithNibName:@"APPsViewController" bundle:nil];
         [self.navigationController pushViewController:vc animated:YES];
         
-        [MobClick event:@"tuijie"];
-        */
         
         /*
         if(![self showApps] )

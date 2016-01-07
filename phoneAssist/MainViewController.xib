@@ -10,6 +10,8 @@
             <connections>
                 <outlet property="advView" destination="OLR-SD-mj5" id="QO1-NW-fUF"/>
                 <outlet property="advView2" destination="ZJa-e9-kXP" id="8Pt-Qq-162"/>
+                <outlet property="appImg" destination="im6-Ca-xi3" id="hRa-zr-wTE"/>
+                <outlet property="appLab" destination="xbG-Ja-YgB" id="SWd-kP-n0N"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="view_1" destination="GUT-0x-WOu" id="tCP-5n-BMd"/>
                 <outlet property="view_2" destination="2Z2-uh-AlQ" id="Sy6-zf-44D"/>
@@ -188,8 +190,8 @@
                                                     <color key="textColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="cunchu.png" translatesAutoresizingMaskIntoConstraints="NO" id="9bP-e4-9ID">
-                                                    <rect key="frame" x="22" y="72" width="50" height="50"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cunchu.png" translatesAutoresizingMaskIntoConstraints="NO" id="9bP-e4-9ID">
+                                                    <rect key="frame" x="20" y="72" width="50" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="50" id="VUs-t5-Qfp"/>
                                                         <constraint firstAttribute="height" constant="50" id="p5y-Nd-xc2"/>
@@ -226,8 +228,8 @@
                                                     <color key="textColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="neicun.png" translatesAutoresizingMaskIntoConstraints="NO" id="yIS-W6-mbW">
-                                                    <rect key="frame" x="8" y="74" width="45" height="45"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="neicun.png" translatesAutoresizingMaskIntoConstraints="NO" id="yIS-W6-mbW">
+                                                    <rect key="frame" x="20" y="74" width="45" height="45"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="45" id="Cv0-tW-xLj"/>
                                                         <constraint firstAttribute="width" constant="45" id="zzH-0k-Tcn"/>
@@ -300,8 +302,8 @@
                                                         <constraint firstAttribute="height" constant="40" id="v8C-Sy-QQZ"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="手机信息" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ndd-el-dT9">
-                                                    <rect key="frame" x="68" y="0.0" width="20" height="193"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="手机信息" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ndd-el-dT9">
+                                                    <rect key="frame" x="70" y="0.0" width="20" height="193"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="20" id="N5W-5Q-hz7"/>
                                                     </constraints>
@@ -331,14 +333,7 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sku-jx-ZaN">
                                             <rect key="frame" x="402" y="407" width="193" height="193"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="news.png" translatesAutoresizingMaskIntoConstraints="NO" id="im6-Ca-xi3">
-                                                    <rect key="frame" x="10" y="76" width="40" height="40"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="40" id="W4j-fr-Ycb"/>
-                                                        <constraint firstAttribute="height" constant="40" id="uN9-dV-axU"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="手机技巧" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbG-Ja-YgB">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="精品推荐" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbG-Ja-YgB">
                                                     <rect key="frame" x="60" y="0.0" width="20" height="193"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="20" id="4CS-tU-Slr"/>
@@ -347,6 +342,13 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="news.png" translatesAutoresizingMaskIntoConstraints="NO" id="im6-Ca-xi3">
+                                                    <rect key="frame" x="8" y="77" width="42" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="W4j-fr-Ycb"/>
+                                                        <constraint firstAttribute="height" constant="40" id="uN9-dV-axU"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <color key="backgroundColor" red="0.0" green="0.50196078431372548" blue="0.6705882352941176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
@@ -376,8 +378,8 @@
                                                         <constraint firstAttribute="width" constant="40" id="sm7-fd-CU7"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="签到" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R4M-vK-UDI">
-                                                    <rect key="frame" x="70" y="22" width="30" height="149"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="签到" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R4M-vK-UDI">
+                                                    <rect key="frame" x="70" y="22" width="22" height="149"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="22" id="rFt-Ce-HhM"/>
                                                     </constraints>

@@ -44,9 +44,9 @@
 #define UM_SHARE_KEY  @"561b5f8067e58e0a5800061b"
 
 ////
-#define SHOW_APP_YEAR  2016
-#define SHOW_APP_MONTH 12
-#define SHOW_APP_DAY   30
+#define SHOW_APP_YEAR  2019
+#define SHOW_APP_MONTH 1
+#define SHOW_APP_DAY   20
 
 #define DataCounterKeyWWANSent @"WWANSent"
 #define DataCounterKeyWWANReceived   @"WWANReceived"
