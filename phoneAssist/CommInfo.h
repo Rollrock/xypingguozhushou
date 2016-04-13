@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import "BaiduMobAdView.h"
+//#import "BaiduMobAdView.h"
 #import "CommData.h"
 #import "UIImageView+WebCache.h"
 

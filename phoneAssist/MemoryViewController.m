@@ -10,15 +10,15 @@
 #import "SystemServices.h"
 #import "PCPieChart.h"
 #import "CommData.h"
-#import "BaiduMobAdView.h"
+//#import "BaiduMobAdView.h"
 
-
+@import GoogleMobileAds;
 
 #define SystemSharedServices [SystemServices sharedServices]
 
 #define isiPhone5  ([[UIScreen mainScreen] bounds].size.height == 568)?TRUE:FALSE
 
-@interface MemoryViewController ()<BaiduMobAdViewDelegate>
+@interface MemoryViewController ()//<BaiduMobAdViewDelegate>
 {
     PCPieChart *pieChart;
     NSMutableArray *components;
@@ -112,6 +112,7 @@
 
 -(void)layoutADV
 {
+    /*
     //顶部
     BaiduMobAdView * _baiduView = [[BaiduMobAdView alloc]init];
     _baiduView.AdUnitTag = BAIDU_ADV_ID;
@@ -120,6 +121,18 @@
     _baiduView.delegate = self;
     [self.view addSubview:_baiduView];
     [_baiduView start];
+     */
+    
+    CGPoint pt ;
+    
+    pt = CGPointMake(0, 0);
+    GADBannerView * _bannerView = [[GADBannerView alloc] initWithAdSize:kGADAdSizeFullBanner origin:pt];
+    _bannerView.adUnitID = ADMOB_ADV_ID;
+    _bannerView.rootViewController = self;
+    [_bannerView loadRequest:[GADRequest request]];
+    
+    [self.view addSubview:_bannerView];
+
 
 }
 

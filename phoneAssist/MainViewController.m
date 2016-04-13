@@ -11,7 +11,7 @@
 #import "SignViewController.h"
 #import "NetSpeedViewController.h"
 #import "NetSpyViewController.h"
-#import "BaiduMobAdView.h"
+//#import "BaiduMobAdView.h"
 #import "CommData.h"
 #import "BatteryViewController.h"
 #import "PhoneInfoViewController.h"
@@ -26,7 +26,7 @@
 @import GoogleMobileAds;
 
 //
-@interface MainViewController ()<BaiduMobAdViewDelegate>
+@interface MainViewController ()<GADInterstitialDelegate>//<BaiduMobAdViewDelegate>
 @property (weak, nonatomic) IBOutlet UIView *view_1;
 @property (weak, nonatomic) IBOutlet UIView *view_2;
 @property (weak, nonatomic) IBOutlet UIView *view_3;
@@ -42,6 +42,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *appLab;
 
 @property (weak, nonatomic) IBOutlet UIImageView *appImg;
+
+@property(nonatomic, strong) GADInterstitial *interstitial;
 
 
 @end
@@ -63,11 +65,19 @@
     //
     [self layoutADV];
     
+    [self createAndLoadInterstitial];
+    
     if(![self showApps] )
     {
         _appImg.hidden = YES;
         _appLab.hidden = YES;
     }
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        if (self.interstitial.isReady) {
+            [self.interstitial presentFromRootViewController:self];
+        }
+    });
 }
 
 - (void)didReceiveMemoryWarning {
@@ -218,6 +228,7 @@
 
 -(void)layoutADV
 {
+    /*
    //
     BaiduMobAdView * _baiduView = [[BaiduMobAdView alloc]init];
     _baiduView.AdUnitTag = BAIDU_ADV_ID;
@@ -226,10 +237,25 @@
     _baiduView.delegate = self;
     [_advView2 addSubview:_baiduView];
     [_baiduView start];
-
+*/
     //
+    {
+        CGPoint pt ;
+        
+        pt = CGPointMake(0, 0);
+        GADBannerView * _bannerView = [[GADBannerView alloc] initWithAdSize:kGADAdSizeFullBanner origin:pt];
+        
+        _bannerView.adUnitID = ADMOB_ADV_ID;
+        _bannerView.rootViewController = self;
+        [_bannerView loadRequest:[GADRequest request]];
+        
+        [_advView2 addSubview:_bannerView];
+
+    }
     
     //
+    {
+    
     CGPoint pt ;
     
     pt = CGPointMake(0, 0);
@@ -240,7 +266,35 @@
     [_bannerView loadRequest:[GADRequest request]];
     
     [_advView addSubview:_bannerView];
+    }
 }
+
+
+- (void)createAndLoadInterstitial {
+    self.interstitial =
+    [[GADInterstitial alloc] initWithAdUnitID:ADMOB_ADV_INSERT_ID];
+    self.interstitial.delegate = self;
+    
+    GADRequest *request = [GADRequest request];
+    // Request test ads on devices you specify. Your test device ID is printed to the console when
+    // an ad request is made. GADInterstitial automatically returns test ads when running on a
+    // simulator.
+    
+    [self.interstitial loadRequest:request];
+}
+
+#pragma mark GADInterstitialDelegate implementation
+
+- (void)interstitial:(GADInterstitial *)interstitial
+didFailToReceiveAdWithError:(GADRequestError *)error {
+    NSLog(@"interstitialDidFailToReceiveAdWithError: %@", [error localizedDescription]);
+}
+
+- (void)interstitialDidDismissScreen:(GADInterstitial *)interstitial {
+    NSLog(@"interstitialDidDismissScreen");
+    //[self startNewGame];
+}
+
 
 -(BOOL)showApps
 {

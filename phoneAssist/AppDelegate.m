@@ -13,11 +13,11 @@
 #import "RFRateMe.h"
 #import "UMSocial.h"
 #import "UMSocialWechatHandler.h"
-#import "BaiduMobAdSplash.h"
+//#import "BaiduMobAdSplash.h"
 
-@interface AppDelegate ()<BaiduMobAdSplashDelegate>
+@interface AppDelegate ()//<BaiduMobAdSplashDelegate>
 {
-    BaiduMobAdSplash *splash;
+    //BaiduMobAdSplash *splash;
 }
 @end
 
@@ -53,6 +53,7 @@
 
 -(void)showADV
 {
+    /*
     // 全屏开屏
     splash = [[BaiduMobAdSplash alloc] init];
     splash.delegate = self;
@@ -60,6 +61,7 @@
     splash.canSplashClick = YES;
 
     [splash loadAndDisplayUsingKeyWindow:self.window];
+     */
 }
 
 - (NSString *)publisherId

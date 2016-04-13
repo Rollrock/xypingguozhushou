@@ -11,7 +11,9 @@
 #import "SSAccelerometerInfo.h"
 #import "NSObject+PerformBlockAfterDelay.h"
 #import "CommData.h"
-#import "BaiduMobAdView.h"
+//#import "BaiduMobAdView.h"
+
+@import GoogleMobileAds;
 
 #define SystemSharedServices [SystemServices sharedServices]
 
@@ -19,7 +21,7 @@
 
 
 
-@interface PhoneInfoViewController ()<BaiduMobAdViewDelegate>
+@interface PhoneInfoViewController ()//<BaiduMobAdViewDelegate>
 
 @end
 
@@ -171,6 +173,7 @@
 
 -(void)layoutADV
 {
+    /*
     //顶部
     BaiduMobAdView * _baiduView = [[BaiduMobAdView alloc]init];
     _baiduView.AdUnitTag = BAIDU_ADV_ID;
@@ -179,6 +182,19 @@
     _baiduView.delegate = self;
     [self.view addSubview:_baiduView];
     [_baiduView start];
+     */
+    
+    CGPoint pt ;
+    
+    pt = CGPointMake(0, [UIScreen mainScreen].bounds.size.height -60);
+    GADBannerView * _bannerView = [[GADBannerView alloc] initWithAdSize:kGADAdSizeFullBanner origin:pt];
+    
+    _bannerView.adUnitID = ADMOB_ADV_ID;
+    _bannerView.rootViewController = self;
+    [_bannerView loadRequest:[GADRequest request]];
+    
+    [self.view addSubview:_bannerView];
+
     
 }
 

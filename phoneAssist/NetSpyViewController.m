@@ -58,7 +58,7 @@
 
 int ipIndex = 100;
 
-@interface NetSpyViewController ()<UITableViewDataSource,UITableViewDelegate,BaiduMobAdViewDelegate>
+@interface NetSpyViewController ()<UITableViewDataSource,UITableViewDelegate/*,BaiduMobAdViewDelegate*/>
 {
     NSString * ipPix;
     
@@ -69,6 +69,8 @@ int ipIndex = 100;
 @property (weak, nonatomic) IBOutlet UIView *advBgView;
 
 @end
+
+@import GoogleMobileAds;
 
 @implementation NetSpyViewController
 
@@ -329,6 +331,7 @@ int ipIndex = 100;
 
 -(void)layoutAdv
 {
+    /*
     //顶部
     BaiduMobAdView * _baiduView = [[BaiduMobAdView alloc]init];
     _baiduView.AdUnitTag = BAIDU_ADV_ID;
@@ -337,6 +340,20 @@ int ipIndex = 100;
     _baiduView.delegate = self;
     [_advBgView addSubview:_baiduView];
     [_baiduView start];
+     */
+    
+    CGPoint pt ;
+    
+    pt = CGPointMake(0, 0);
+    GADBannerView * _bannerView = [[GADBannerView alloc] initWithAdSize:kGADAdSizeFullBanner origin:pt];
+    
+    _bannerView.adUnitID = ADMOB_ADV_ID;
+    _bannerView.rootViewController = self;
+    [_bannerView loadRequest:[GADRequest request]];
+    
+    [_advBgView addSubview:_bannerView];
+
+    
 }
 
 

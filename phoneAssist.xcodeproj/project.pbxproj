@@ -29,8 +29,6 @@
 		482A8A2A1BC7A9EB00377B64 /* NetSpyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 482A8A1E1BC7A9EB00377B64 /* NetSpyTableViewCell.m */; };
 		482A8A2B1BC7A9EB00377B64 /* NetSpeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 482A8A201BC7A9EB00377B64 /* NetSpeedViewController.xib */; };
 		482A8A2C1BC7A9EB00377B64 /* NetSpeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 482A8A211BC7A9EB00377B64 /* NetSpeedViewController.m */; };
-		482A8A481BC7AA5800377B64 /* baidumobadsdk.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 482A8A3E1BC7AA5800377B64 /* baidumobadsdk.bundle */; };
-		482A8A491BC7AA5800377B64 /* libBaiduMobAdSdk64bit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 482A8A441BC7AA5800377B64 /* libBaiduMobAdSdk64bit.a */; };
 		482A8A4D1BC7AAB800377B64 /* CommInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 482A8A4A1BC7AAB800377B64 /* CommInfo.m */; };
 		482A8AAE1BC7AB0B00377B64 /* THProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 482A8A8A1BC7AB0B00377B64 /* THProgressView.m */; };
 		482A8AAF1BC7AB0B00377B64 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 482A8A8D1BC7AB0B00377B64 /* SVIndefiniteAnimatedView.m */; };
@@ -218,19 +216,6 @@
 		482A8A201BC7A9EB00377B64 /* NetSpeedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NetSpeedViewController.xib; sourceTree = "<group>"; };
 		482A8A211BC7A9EB00377B64 /* NetSpeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetSpeedViewController.m; sourceTree = "<group>"; };
 		482A8A221BC7A9EB00377B64 /* NetSpeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetSpeedViewController.h; sourceTree = "<group>"; };
-		482A8A381BC7AA5800377B64 /* BaiduMobAdCommonConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaiduMobAdCommonConfig.h; sourceTree = "<group>"; };
-		482A8A391BC7AA5800377B64 /* BaiduMobAdDelegateProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaiduMobAdDelegateProtocol.h; sourceTree = "<group>"; };
-		482A8A3A1BC7AA5800377B64 /* BaiduMobAdInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaiduMobAdInterstitial.h; sourceTree = "<group>"; };
-		482A8A3B1BC7AA5800377B64 /* BaiduMobAdInterstitialDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaiduMobAdInterstitialDelegate.h; sourceTree = "<group>"; };
-		482A8A3C1BC7AA5800377B64 /* BaiduMobAdRecommendDelegateProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaiduMobAdRecommendDelegateProtocol.h; sourceTree = "<group>"; };
-		482A8A3D1BC7AA5800377B64 /* BaiduMobAdRecommendIcon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaiduMobAdRecommendIcon.h; sourceTree = "<group>"; };
-		482A8A3E1BC7AA5800377B64 /* baidumobadsdk.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = baidumobadsdk.bundle; sourceTree = "<group>"; };
-		482A8A3F1BC7AA5800377B64 /* BaiduMobAdSplash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaiduMobAdSplash.h; sourceTree = "<group>"; };
-		482A8A401BC7AA5800377B64 /* BaiduMobAdSplashDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaiduMobAdSplashDelegate.h; sourceTree = "<group>"; };
-		482A8A411BC7AA5800377B64 /* BaiduMobAdVideoDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaiduMobAdVideoDelegate.h; sourceTree = "<group>"; };
-		482A8A421BC7AA5800377B64 /* BaiduMobAdVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaiduMobAdVideoView.h; sourceTree = "<group>"; };
-		482A8A431BC7AA5800377B64 /* BaiduMobAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaiduMobAdView.h; sourceTree = "<group>"; };
-		482A8A441BC7AA5800377B64 /* libBaiduMobAdSdk64bit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBaiduMobAdSdk64bit.a; sourceTree = "<group>"; };
 		482A8A4A1BC7AAB800377B64 /* CommInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommInfo.m; sourceTree = "<group>"; };
 		482A8A4B1BC7AAB800377B64 /* CommInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommInfo.h; sourceTree = "<group>"; };
 		482A8A4C1BC7AAB800377B64 /* CommData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommData.h; sourceTree = "<group>"; };
@@ -519,7 +504,6 @@
 				485F2E081BCB9D0F005A4F2A /* libSocialSina.a in Frameworks */,
 				482A8AF71BC7ACAE00377B64 /* AddressBook.framework in Frameworks */,
 				485F2E0B1BCB9D0F005A4F2A /* libSocialWechat.a in Frameworks */,
-				482A8A491BC7AA5800377B64 /* libBaiduMobAdSdk64bit.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -533,26 +517,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		482A8A371BC7AA5800377B64 /* BaiduAdv */ = {
-			isa = PBXGroup;
-			children = (
-				482A8A381BC7AA5800377B64 /* BaiduMobAdCommonConfig.h */,
-				482A8A391BC7AA5800377B64 /* BaiduMobAdDelegateProtocol.h */,
-				482A8A3A1BC7AA5800377B64 /* BaiduMobAdInterstitial.h */,
-				482A8A3B1BC7AA5800377B64 /* BaiduMobAdInterstitialDelegate.h */,
-				482A8A3C1BC7AA5800377B64 /* BaiduMobAdRecommendDelegateProtocol.h */,
-				482A8A3D1BC7AA5800377B64 /* BaiduMobAdRecommendIcon.h */,
-				482A8A3E1BC7AA5800377B64 /* baidumobadsdk.bundle */,
-				482A8A3F1BC7AA5800377B64 /* BaiduMobAdSplash.h */,
-				482A8A401BC7AA5800377B64 /* BaiduMobAdSplashDelegate.h */,
-				482A8A411BC7AA5800377B64 /* BaiduMobAdVideoDelegate.h */,
-				482A8A421BC7AA5800377B64 /* BaiduMobAdVideoView.h */,
-				482A8A431BC7AA5800377B64 /* BaiduMobAdView.h */,
-				482A8A441BC7AA5800377B64 /* libBaiduMobAdSdk64bit.a */,
-			);
-			path = BaiduAdv;
-			sourceTree = "<group>";
-		};
 		482A8A4E1BC7AB0B00377B64 /* WaveView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1008,7 +972,6 @@
 				482A8A4A1BC7AAB800377B64 /* CommInfo.m */,
 				482A8A4B1BC7AAB800377B64 /* CommInfo.h */,
 				482A8A4C1BC7AAB800377B64 /* CommData.h */,
-				482A8A371BC7AA5800377B64 /* BaiduAdv */,
 				482A8A141BC7A9EB00377B64 /* SpeedResultViewController.xib */,
 				482A8A151BC7A9EB00377B64 /* SpeedResultViewController.m */,
 				482A8A161BC7A9EB00377B64 /* SpeedResultViewController.h */,
@@ -1198,7 +1161,6 @@
 				TargetAttributes = {
 					48BD7C2E1BBABC1700064FCE = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = 398SEH57CU;
 					};
 					48BD7C471BBABC1700064FCE = {
 						CreatedOnToolsVersion = 6.4;
@@ -1244,7 +1206,6 @@
 				486026451BC8F06200919548 /* DataFlowViewController.xib in Resources */,
 				482A8B251BC7AFF500377B64 /* back.png in Resources */,
 				48C0383E1C03309C003C2C29 /* news.png in Resources */,
-				482A8A481BC7AA5800377B64 /* baidumobadsdk.bundle in Resources */,
 				482A8B331BC7BAEE00377B64 /* batteryBg.png in Resources */,
 				485F2E131BCB9D0F005A4F2A /* UMShareEditViewController.xib in Resources */,
 				486026511BC8FB9500919548 /* MemoryViewController.xib in Resources */,
@@ -1488,7 +1449,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: chaoxiao zhuang (398SEH57CU)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: chaoxiao zhuang (398SEH57CU)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_BITCODE = NO;
@@ -1515,6 +1477,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1538,7 +1501,9 @@
 					"-ObjC",
 					"-lstdc++",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rock.phoneAssist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -1548,6 +1513,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: chaoxiao zhuang (398SEH57CU)";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1571,7 +1537,9 @@
 					"-ObjC",
 					"-lstdc++",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rock.phoneAssist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
