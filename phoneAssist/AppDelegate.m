@@ -11,6 +11,8 @@
 #import "CommData.h"
 #import "RFRateMe.h"
 
+@import GoogleMobileAds;
+
 @interface AppDelegate ()
 {
 }
@@ -38,6 +40,8 @@
     
     [RFRateMe showRateAlertAfterTimesOpened:3];
     
+    //
+    [GADMobileAds configureWithApplicationID:@"ca-app-pub-3058205099381432~7562509540"];
     
     //
     [self.window makeKeyAndVisible];

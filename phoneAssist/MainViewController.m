@@ -231,7 +231,9 @@
         
         _bannerView.adUnitID = ADMOB_ADV_ID;
         _bannerView.rootViewController = self;
-        [_bannerView loadRequest:[GADRequest request]];
+        GADRequest * req = [GADRequest request];
+        req.testDevices = @[ @"02257fbde9fc053b183b97056fe93ff4" ];
+        [_bannerView loadRequest:req];
         
         [_advView2 addSubview:_bannerView];
 
@@ -245,9 +247,12 @@
     pt = CGPointMake(0, 0);
     GADBannerView * _bannerView = [[GADBannerView alloc] initWithAdSize:kGADAdSizeFullBanner origin:pt];
     
-    _bannerView.adUnitID = ADMOB_ADV_ID;
+    _bannerView.adUnitID = ADMOB_ADV_ID_2;
     _bannerView.rootViewController = self;
-    [_bannerView loadRequest:[GADRequest request]];
+        
+    GADRequest * req = [GADRequest request];
+    req.testDevices = @[ @"02257fbde9fc053b183b97056fe93ff4" ];
+    [_bannerView loadRequest:req];
     
     [_advView addSubview:_bannerView];
     }
