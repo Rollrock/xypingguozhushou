@@ -19,7 +19,6 @@
 #import "MemoryViewController.h"
 #import "DiskViewController.h"
 #import "APPsViewController.h"
-#import "MobClick.h"
 #import "WebViewController.h"
 #import "NewsViewController.h"
 
@@ -54,7 +53,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    self.title = @"苹果手机助手";
+    self.title = @"手机信息";
     self.navigationController.navigationBar.barTintColor = [UIColor blackColor];
     
     UIColor *color = [UIColor whiteColor];
@@ -73,7 +72,7 @@
         _appLab.hidden = YES;
     }
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(4 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         if (self.interstitial.isReady) {
             [self.interstitial presentFromRootViewController:self];
         }
@@ -98,9 +97,6 @@
         SignViewController * vc = [[SignViewController alloc]initWithNibName:@"SignViewController" bundle:nil];
         [self.navigationController pushViewController:vc animated:YES];
         
-        
-        [MobClick event:@"qianming"];
-        
          return;
     }
     
@@ -111,8 +107,6 @@
         DataFlowViewController * vc = [[DataFlowViewController alloc]initWithNibName:@"DataFlowViewController" bundle:nil];
         [self.navigationController pushViewController:vc animated:YES];
         
-        [MobClick event:@"liuliang"];
-        
         return;
     }
     
@@ -121,8 +115,6 @@
     {
         NetSpeedViewController * vc = [[NetSpeedViewController alloc]initWithNibName:@"NetSpeedViewController" bundle:nil];
         [self.navigationController pushViewController:vc animated:YES];
-        
-        [MobClick event:@"wangsu"];
         
         return;
     }
@@ -133,8 +125,6 @@
         NetSpyViewController * vc = [[NetSpyViewController alloc]initWithNibName:@"NetSpyViewController" bundle:nil];
         [self.navigationController pushViewController:vc animated:YES];
         
-        [MobClick event:@"juyuwang"];
-        
         return;
     }
     
@@ -143,8 +133,6 @@
     {
         DiskViewController * vc = [[DiskViewController alloc]initWithNibName:@"DiskViewController" bundle:nil];
         [self.navigationController pushViewController:vc animated:YES];
-        
-        [MobClick event:@"cunchu"];
         
         return;
     }
@@ -156,7 +144,6 @@
         MemoryViewController * vc = [[MemoryViewController alloc]initWithNibName:@"MemoryViewController" bundle:nil];
         [self.navigationController pushViewController:vc animated:YES];
         
-        [MobClick event:@"neicun"];
         
         return;
     }
@@ -168,8 +155,6 @@
         BatteryViewController * vc = [[BatteryViewController alloc]initWithNibName:@"BatteryViewController" bundle:nil];
         [self.navigationController pushViewController:vc animated:YES];
         
-        [MobClick event:@"dianliang"];
-        
         return;
     }
     
@@ -180,8 +165,7 @@
         PhoneInfoViewController * vc = [[PhoneInfoViewController alloc]initWithNibName:nil bundle:nil];
         [self.navigationController pushViewController:vc animated:YES];
         
-        [MobClick event:@"xinxi"];
-        
+          
         return;
     }
     

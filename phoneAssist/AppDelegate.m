@@ -8,16 +8,11 @@
 
 #import "AppDelegate.h"
 #import "MainViewController.h"
-#import "MobClick.h"
 #import "CommData.h"
 #import "RFRateMe.h"
-#import "UMSocial.h"
-#import "UMSocialWechatHandler.h"
-//#import "BaiduMobAdSplash.h"
 
-@interface AppDelegate ()//<BaiduMobAdSplashDelegate>
+@interface AppDelegate ()
 {
-    //BaiduMobAdSplash *splash;
 }
 @end
 
@@ -64,10 +59,6 @@
      */
 }
 
-- (NSString *)publisherId
-{
-    return BAIDU_APP_ID;
-}
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {

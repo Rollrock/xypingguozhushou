@@ -7,7 +7,6 @@
 //
 
 #import "SpeedResultViewController.h"
-#import "UMSocial.h"
 #import "commData.h"
 
 @interface SpeedResultViewController ()
@@ -95,6 +94,7 @@
 
 - (IBAction)shareClicked
 {
+    /*
     
     [UMSocialSnsService presentSnsIconSheetView:self
                                          appKey:UM_SHARE_KEY
@@ -102,6 +102,8 @@
                                      shareImage:SHARE_IMAGE
                                 shareToSnsNames:[NSArray arrayWithObjects:UMShareToSina,UMShareToWechatTimeline,UMShareToWechatSession,nil]
                                        delegate:nil];
+     
+     */
 
 }
 @end
