@@ -122,15 +122,11 @@
 #pragma
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag
 {
-    //[arcLayer removeFromSuperlayer];
-    //[speedLab.layer removeFromSuperlayer];
-    
     //
     [timer invalidate];
     //
     
     [connection cancel];
-    
     //
     
     [self gotoResultVC];
@@ -154,7 +150,7 @@
     stateTime = [[NSDate date] timeIntervalSince1970];
     
     //文件地址
-    NSString *urlAsString = @"http://dlsw.baidu.com/sw-search-sp/soft/f0/29670/langpack64.1405392013.exe";
+    NSString *urlAsString = @"http://download.skycn.com/hao123-soft-online-bcs/soft/T/2015-05-15_ThunderSpeed1.0.25.256.exe";
     
     NSURL    *url = [NSURL URLWithString:urlAsString];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
@@ -204,8 +200,6 @@
         
         return;
     }
-    
-    
 }
 
 - (void) connectionDidFinishLoading:(NSURLConnection *)connection
@@ -236,15 +230,6 @@
 
 -(void)layoutADV
 {
-    /*
-    AppDelegate * appDel = (AppDelegate*)[[UIApplication sharedApplication]delegate];
-    
-    if( ![appDel showAdv] )
-    {
-        return;
-    }
-     */
-    
     //中间的 ADV
     CGPoint pt ;
     
@@ -262,15 +247,5 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

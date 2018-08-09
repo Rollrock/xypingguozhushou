@@ -319,29 +319,10 @@ int ipIndex = 100;
     
     //
     _resultLab.text = [NSString stringWithFormat:@"一共发现%d台设备连接到您的WIFI",deviceArray.count];
-    
 }
-
-
-- (NSString *)publisherId
-{
-    return  BAIDU_APP_ID;
-}
-
 
 -(void)layoutAdv
 {
-    /*
-    //顶部
-    BaiduMobAdView * _baiduView = [[BaiduMobAdView alloc]init];
-    _baiduView.AdUnitTag = BAIDU_ADV_ID;
-    _baiduView.AdType = BaiduMobAdViewTypeBanner;
-    _baiduView.frame = CGRectMake(0, 60, kBaiduAdViewBanner468x60.width, kBaiduAdViewBanner468x60.height);
-    _baiduView.delegate = self;
-    [_advBgView addSubview:_baiduView];
-    [_baiduView start];
-     */
-    
     CGPoint pt ;
     
     pt = CGPointMake(0, 0);
@@ -352,8 +333,6 @@ int ipIndex = 100;
     [_bannerView loadRequest:[GADRequest request]];
     
     [_advBgView addSubview:_bannerView];
-
-    
 }
 
 

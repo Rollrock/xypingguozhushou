@@ -10,6 +10,10 @@
 #import "MainViewController.h"
 #import "CommData.h"
 #import "RFRateMe.h"
+#import <UMShare/UMShare.h>
+#import "DownLoadTool.h"
+#import "AdvertModel.h"
+
 
 @import GoogleMobileAds;
 
@@ -36,13 +40,24 @@
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     
     [self initControllers];
+    //
     
+    [AdvertModel getAdvertReq];
+    
+    
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        [DownLoadTool downLoadWebAdv][@"url"];
+    });
+    //
     
     [RFRateMe showRateAlertAfterTimesOpened:3];
     
     //
     [GADMobileAds configureWithApplicationID:@"ca-app-pub-3058205099381432~7562509540"];
     
+    [[UMSocialManager defaultManager] setUmSocialAppkey:@"55b1a17ee0f55a2205000ade"];
+    
+    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_WechatSession appKey:@"wx94fd4cee30e731f2" appSecret:@"fbef83de6d89a0f259336258460ed3b6" redirectURL:nil];
     //
     [self.window makeKeyAndVisible];
     
@@ -52,15 +67,7 @@
 
 -(void)showADV
 {
-    /*
-    // 全屏开屏
-    splash = [[BaiduMobAdSplash alloc] init];
-    splash.delegate = self;
-    splash.AdUnitTag = BAIDU_SPLASH_ID;
-    splash.canSplashClick = YES;
 
-    [splash loadAndDisplayUsingKeyWindow:self.window];
-     */
 }
 
 

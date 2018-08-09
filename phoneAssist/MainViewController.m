@@ -21,6 +21,10 @@
 #import "APPsViewController.h"
 #import "WebViewController.h"
 #import "NewsViewController.h"
+#import "DownLoadTool.h"
+#import "WebAdvViewController.h"
+
+#import "AdvertViewController.h"
 
 @import GoogleMobileAds;
 
@@ -144,7 +148,6 @@
         MemoryViewController * vc = [[MemoryViewController alloc]initWithNibName:@"MemoryViewController" bundle:nil];
         [self.navigationController pushViewController:vc animated:YES];
         
-        
         return;
     }
     
@@ -158,70 +161,57 @@
         return;
     }
     
-    
     pt = [t locationInView:_view_8];
     if( CGRectContainsPoint(_view_8.bounds, pt) )
     {
         PhoneInfoViewController * vc = [[PhoneInfoViewController alloc]initWithNibName:nil bundle:nil];
         [self.navigationController pushViewController:vc animated:YES];
         
-          
         return;
     }
-    
     
     pt = [t locationInView:_view_9];
     if( CGRectContainsPoint(_view_9.bounds, pt) )
     {
-        /*
-        NewsViewController * vc = [[NewsViewController alloc]initWithNibName:@"NewsViewController" bundle:nil];
-        [self.navigationController pushViewController:vc animated:YES];
-        */
-        
-        
         if(![self showApps] )
         {
             return;
         }
         
-        //
-        APPsViewController * vc = [[APPsViewController alloc]initWithNibName:@"APPsViewController" bundle:nil];
-        [self.navigationController pushViewController:vc animated:YES];
+        int rand = arc4random() % 2;
         
-        
-        /*
-        if(![self showApps] )
+        if( rand == 0 )
         {
-            return;
+            //APP推广
+            AdvertViewController * vc = [AdvertViewController new];
+            [self.navigationController pushViewController:vc animated:YES];
         }
- 
+        else
+        {
+            //web
+            
+            NSString * url = [DownLoadTool downLoadWebAdv][@"url"];
+            WebAdvViewController * vc = [WebAdvViewController new];
+            vc.url = url;
+            if( [url length] > 0 )
+            {
+                [self presentViewController:vc animated:YES completion:nil];
+            }
+            else
+            {
+                //APP推广页面
+                AdvertViewController * vc = [AdvertViewController new];
+                [self.navigationController pushViewController:vc animated:YES];
+            }
+        }
         
-        WebViewController * vc = [[WebViewController alloc]initWithNibName:@"WebViewController" bundle:nil];
-        [self.navigationController pushViewController:vc animated:YES];
-        */
         
         return;
     }
 }
 
-- (NSString *)publisherId
-{
-    return  BAIDU_APP_ID;
-}
-
-
 -(void)layoutADV
 {
-    /*
-   //
-    BaiduMobAdView * _baiduView = [[BaiduMobAdView alloc]init];
-    _baiduView.AdUnitTag = BAIDU_ADV_ID;
-    _baiduView.AdType = BaiduMobAdViewTypeBanner;
-    _baiduView.frame = CGRectMake(0, 0, kBaiduAdViewBanner468x60.width, kBaiduAdViewBanner468x60.height);
-    _baiduView.delegate = self;
-    [_advView2 addSubview:_baiduView];
-    [_baiduView start];
-*/
     //
     {
         CGPoint pt ;
@@ -242,19 +232,19 @@
     //
     {
     
-    CGPoint pt ;
-    
-    pt = CGPointMake(0, 0);
-    GADBannerView * _bannerView = [[GADBannerView alloc] initWithAdSize:kGADAdSizeFullBanner origin:pt];
-    
-    _bannerView.adUnitID = ADMOB_ADV_ID_2;
-    _bannerView.rootViewController = self;
+        CGPoint pt ;
         
-    GADRequest * req = [GADRequest request];
-    req.testDevices = @[ @"02257fbde9fc053b183b97056fe93ff4" ];
-    [_bannerView loadRequest:req];
-    
-    [_advView addSubview:_bannerView];
+        pt = CGPointMake(0, 0);
+        GADBannerView * _bannerView = [[GADBannerView alloc] initWithAdSize:kGADAdSizeFullBanner origin:pt];
+        
+        _bannerView.adUnitID = ADMOB_ADV_ID_2;
+        _bannerView.rootViewController = self;
+            
+        GADRequest * req = [GADRequest request];
+        req.testDevices = @[ @"02257fbde9fc053b183b97056fe93ff4" ];
+        [_bannerView loadRequest:req];
+        
+        [_advView addSubview:_bannerView];
     }
 }
 
@@ -281,12 +271,17 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
 
 - (void)interstitialDidDismissScreen:(GADInterstitial *)interstitial {
     NSLog(@"interstitialDidDismissScreen");
-    //[self startNewGame];
 }
 
 
 -(BOOL)showApps
 {
+    if( [[DownLoadTool downLoadWebAdv][@"showAdvs"] isEqualToString:@"1"] )
+    {
+        return YES;
+    }
+    
+    
     NSDateComponents * data = [[NSDateComponents alloc]init];
     NSCalendar * cal = [NSCalendar currentCalendar];
     

@@ -19,9 +19,7 @@
 
 #define LAB_VIEW_BG_COLOR  [UIColor colorWithRed:240/255.0 green:240/255.0 blue:240/255.0 alpha:1]//[UIColor grayColor]
 
-
-
-@interface PhoneInfoViewController ()//<BaiduMobAdViewDelegate>
+@interface PhoneInfoViewController ()
 
 @end
 
@@ -42,10 +40,9 @@
         
         UIScrollView * scrView = [[UIScrollView alloc]initWithFrame:[UIScreen mainScreen].bounds];
         [self.view addSubview:scrView];
-        
-        
-        
-        CGFloat yPos = 0;
+    
+    
+        CGFloat yPos = 60;
         int index = 0;
         int const VIEW_HEIGHT = 35;
         UIFont * font = [UIFont systemFontOfSize:15];
@@ -159,43 +156,26 @@
             [scrView addSubview:lab];
         }
     
-    [self layoutADV];
+    [self layoutADV:scrView];
 }
 
-
-
-
-- (NSString *)publisherId
+-(void)layoutADV:(UIView*)parentView
 {
-    return  BAIDU_APP_ID;
-}
-
-
--(void)layoutADV
-{
-    /*
-    //顶部
-    BaiduMobAdView * _baiduView = [[BaiduMobAdView alloc]init];
-    _baiduView.AdUnitTag = BAIDU_ADV_ID;
-    _baiduView.AdType = BaiduMobAdViewTypeBanner;
-    _baiduView.frame = CGRectMake(0, [UIScreen mainScreen].bounds.size.height -60, kBaiduAdViewBanner468x60.width, kBaiduAdViewBanner468x60.height);
-    _baiduView.delegate = self;
-    [self.view addSubview:_baiduView];
-    [_baiduView start];
-     */
-    
+  
     CGPoint pt ;
     
-    pt = CGPointMake(0, [UIScreen mainScreen].bounds.size.height -60);
-    GADBannerView * _bannerView = [[GADBannerView alloc] initWithAdSize:kGADAdSizeFullBanner origin:pt];
+    pt = CGPointMake(0, 0);//[UIScreen mainScreen].bounds.size.height -60);
+    GADBannerView * _bannerView = [[GADBannerView alloc] initWithAdSize:kGADAdSizeSmartBannerPortrait origin:pt];
     
     _bannerView.adUnitID = ADMOB_ADV_ID;
     _bannerView.rootViewController = self;
-    [_bannerView loadRequest:[GADRequest request]];
     
-    [self.view addSubview:_bannerView];
-
+    GADRequest * req = [GADRequest request];
     
+    req.testDevices = @[ @"02257fbde9fc053b183b97056fe93ff4" ];
+    [_bannerView loadRequest:req];
+    
+    [parentView addSubview:_bannerView];
 }
 
 -(void)leftClicked
@@ -208,14 +188,5 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

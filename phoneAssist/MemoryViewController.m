@@ -102,14 +102,6 @@
     [self layoutADV];
 }
 
-
-
-- (NSString *)publisherId
-{
-    return  BAIDU_APP_ID;
-}
-
-
 -(void)layoutADV
 {
     /*

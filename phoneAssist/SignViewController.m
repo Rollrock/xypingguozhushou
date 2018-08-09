@@ -95,32 +95,14 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-
-- (NSString *)publisherId
-{
-    return  BAIDU_APP_ID;
-}
-
-
 -(void)layoutADV
 {
-    /*
-    //顶部
-    BaiduMobAdView * _baiduView = [[BaiduMobAdView alloc]init];
-    _baiduView.AdUnitTag = BAIDU_ADV_ID;
-    _baiduView.AdType = BaiduMobAdViewTypeBanner;
-    _baiduView.frame = CGRectMake(0, 0, kBaiduAdViewBanner468x60.width, kBaiduAdViewBanner468x60.height);
-    _baiduView.delegate = self;
-    [_advBgView addSubview:_baiduView];
-    [_baiduView start];
-     */
-    
     CGPoint pt ;
     
     pt = CGPointMake(0, 0);
     GADBannerView * _bannerView = [[GADBannerView alloc] initWithAdSize:kGADAdSizeFullBanner origin:pt];
     
-    _bannerView.adUnitID = ADMOB_ADV_ID;
+    _bannerView.adUnitID = ADMOB_ADV_SIGN_ID;
     _bannerView.rootViewController = self;
     [_bannerView loadRequest:[GADRequest request]];
     
@@ -176,7 +158,6 @@
     return NO;
 }
 
-
 - (IBAction)signClicked
 {
     [self setSignInfo];
@@ -203,7 +184,6 @@
         [alert show];
 
     }
-    
 }
 
 #pragma UIAlertView
@@ -214,18 +194,15 @@
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:kAppStoreAddress]];
     }
 }
-
 //
 
 - (void)createAndLoadInterstitial {
     self.interstitial =
-    [[GADInterstitial alloc] initWithAdUnitID:ADMOB_ADV_INSERT_ID];
+    [[GADInterstitial alloc] initWithAdUnitID:ADMOB_ADV_INSERT_SIGN_ID];
     self.interstitial.delegate = self;
     
     GADRequest *request = [GADRequest request];
-    // Request test ads on devices you specify. Your test device ID is printed to the console when
-    // an ad request is made. GADInterstitial automatically returns test ads when running on a
-    // simulator.
+    request.testDevices = @[ @"02257fbde9fc053b183b97056fe93ff4" ];
     
     [self.interstitial loadRequest:request];
 }

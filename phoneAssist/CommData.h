@@ -26,29 +26,25 @@
 #define TAB_ICON_W 30
 #define TAB_ICON_H 30
 
-
-
 #define RGB(r,g,b) [UIColor colorWithRed:(r/255.0f) green:(g/255.0f)  blue:(b/255.0f) alpha:(1)]
 #define COMMON_BG_COLOR  RGB(10,10,10)
 
 #define COLOR_FROM_HEX(hexValue) ([UIColor colorWithRed:((float)((hexValue & 0xFF0000) >> 16))/255.0 green:((float)((hexValue & 0xFF00) >> 8))/255.0 blue:((float)(hexValue & 0xFF))/255.0 alpha:1.0])
 
-
-#define BAIDU_APP_ID  @"edf2086c"
-#define BAIDU_ADV_ID  @"2066679"
-
-#define BAIDU_SPLASH_ID @"2321761"
-
 #define ADMOB_ADV_ID @"ca-app-pub-3058205099381432/9039242741"
 #define ADMOB_ADV_ID_2 @"ca-app-pub-3058205099381432/4627672580"
-#define ADMOB_ADV_INSERT_ID @""
+#define ADMOB_ADV_SIGN_ID @"ca-app-pub-3058205099381432/5358246427"
+
+#define ADMOB_ADV_INSERT_ID @"ca-app-pub-3058205099381432/2808104707"
+
+#define ADMOB_ADV_INSERT_SIGN_ID @"ca-app-pub-3058205099381432/4955755897"
 
 #define UM_SHARE_KEY  @"561b5f8067e58e0a5800061b"
 
 ////
-#define SHOW_APP_YEAR  2019
-#define SHOW_APP_MONTH 1
-#define SHOW_APP_DAY   20
+#define SHOW_APP_YEAR  2018
+#define SHOW_APP_MONTH 9
+#define SHOW_APP_DAY   10
 
 #define DataCounterKeyWWANSent @"WWANSent"
 #define DataCounterKeyWWANReceived   @"WWANReceived"

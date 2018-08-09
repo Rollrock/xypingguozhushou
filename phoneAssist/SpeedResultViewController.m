@@ -8,6 +8,7 @@
 
 #import "SpeedResultViewController.h"
 #import "commData.h"
+#import <UMShare/UMShare.h>
 
 @interface SpeedResultViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *imgBgView;
@@ -77,16 +78,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 
 - (IBAction)backClicked {
     [self dismissViewControllerAnimated:YES completion:nil];
@@ -94,16 +85,35 @@
 
 - (IBAction)shareClicked
 {
-    /*
-    
-    [UMSocialSnsService presentSnsIconSheetView:self
-                                         appKey:UM_SHARE_KEY
-                                      shareText:SHARE_TEXT
-                                     shareImage:SHARE_IMAGE
-                                shareToSnsNames:[NSArray arrayWithObjects:UMShareToSina,UMShareToWechatTimeline,UMShareToWechatSession,nil]
-                                       delegate:nil];
-     
-     */
+    [self shareWebPageToPlatformType:UMSocialPlatformType_WechatSession];
+}
 
+
+- (void)shareWebPageToPlatformType:(UMSocialPlatformType)platformType
+{
+    //创建分享消息对象
+    UMSocialMessageObject *messageObject = [UMSocialMessageObject messageObject];
+    //创建网页内容对象
+    UMShareWebpageObject *shareObject = [UMShareWebpageObject shareObjectWithTitle:@"苹果手机助手" descr:SHARE_TEXT thumImage:SHARE_IMAGE];
+    //设置网页地址
+    shareObject.webpageUrl = kAppStoreAddress;
+    //分享消息对象设置分享内容对象
+    messageObject.shareObject = shareObject;
+    //调用分享接口
+    [[UMSocialManager defaultManager] shareToPlatform:platformType messageObject:messageObject currentViewController:nil completion:^(id data, NSError *error) {
+        if (error) {
+            NSLog(@"************Share fail with error %@*********",error);
+        }else{
+            if ([data isKindOfClass:[UMSocialShareResponse class]]) {
+                UMSocialShareResponse *resp = data;
+                //分享结果消息
+                NSLog(@"response message is %@",resp.message);
+                //第三方原始返回的数据
+                UMSocialLogInfo(@"response originalResponse data is %@",resp.originalResponse);
+            }else{
+                NSLog(@"response data is %@",data);
+            }
+        }
+    }];
 }
 @end

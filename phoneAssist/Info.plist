@@ -15,7 +15,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0.5</string>
+	<string>2.0.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleURLTypes</key>
@@ -34,10 +34,11 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>160419</string>
+	<string>18080901</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
-		<string>baidumobads</string>
+		<string>weixin</string>
+		<string>wechat</string>
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
