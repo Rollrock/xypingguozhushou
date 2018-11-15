@@ -147,8 +147,6 @@
 		48C0383B1C03298B003C2C29 /* NewsCTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C038391C03298B003C2C29 /* NewsCTableViewCell.m */; };
 		48C0383C1C03298B003C2C29 /* NewsCTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48C0383A1C03298B003C2C29 /* NewsCTableViewCell.xib */; };
 		48C0383E1C03309C003C2C29 /* news.png in Resources */ = {isa = PBXBuildFile; fileRef = 48C0383D1C03309C003C2C29 /* news.png */; };
-		48C7AC2C210F4B5000EC7BE1 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48C7AC04210F4B4F00EC7BE1 /* GoogleMobileAds.framework */; };
-		48C7AC2D210F4B5000EC7BE1 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 48C7AC05210F4B4F00EC7BE1 /* README.txt */; };
 		48C7AC2E210F4B5000EC7BE1 /* UMCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48C7AC0A210F4B4F00EC7BE1 /* UMCommon.framework */; };
 		48C7AC2F210F4B5000EC7BE1 /* libSocialQQ.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 48C7AC0F210F4B4F00EC7BE1 /* libSocialQQ.a */; };
 		48C7AC30210F4B5000EC7BE1 /* libSocialSina.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 48C7AC12210F4B4F00EC7BE1 /* libSocialSina.a */; };
@@ -168,6 +166,11 @@
 		48C7AC41210F4B9A00EC7BE1 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 48C7AC40210F4B9A00EC7BE1 /* libc++.tbd */; };
 		48C7AC42210F4B9E00EC7BE1 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4858B22B1C1A4850003F6809 /* libz.tbd */; };
 		48C7AC44210F4BD900EC7BE1 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48C7AC43210F4BD900EC7BE1 /* StoreKit.framework */; };
+		48DCB981219D10FA001AFB6A /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48DCB97F219D10F9001AFB6A /* GoogleMobileAds.framework */; };
+		48DCB982219D10FA001AFB6A /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 48DCB980219D10F9001AFB6A /* README.txt */; };
+		48DCB986219D1ABD001AFB6A /* SignViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 48DCB983219D1ABB001AFB6A /* SignViewController2.m */; };
+		48DCB987219D1ABD001AFB6A /* SignViewController2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48DCB985219D1ABC001AFB6A /* SignViewController2.xib */; };
+		48DCB989219D1C77001AFB6A /* signTip2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 48DCB988219D1C76001AFB6A /* signTip2@2x.png */; };
 		48EABC46211C2031004B8809 /* AdvertModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 48EABBEF211C2031004B8809 /* AdvertModel.m */; };
 		48EABC47211C2031004B8809 /* AdvertTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 48EABBF1211C2031004B8809 /* AdvertTableViewCell.m */; };
 		48EABC48211C2031004B8809 /* AdvertTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48EABBF2211C2031004B8809 /* AdvertTableViewCell.xib */; };
@@ -425,8 +428,6 @@
 		48C038391C03298B003C2C29 /* NewsCTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsCTableViewCell.m; sourceTree = "<group>"; };
 		48C0383A1C03298B003C2C29 /* NewsCTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsCTableViewCell.xib; sourceTree = "<group>"; };
 		48C0383D1C03309C003C2C29 /* news.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = news.png; sourceTree = "<group>"; };
-		48C7AC04210F4B4F00EC7BE1 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
-		48C7AC05210F4B4F00EC7BE1 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		48C7AC0A210F4B4F00EC7BE1 /* UMCommon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UMCommon.framework; sourceTree = "<group>"; };
 		48C7AC0F210F4B4F00EC7BE1 /* libSocialQQ.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSocialQQ.a; sourceTree = "<group>"; };
 		48C7AC10210F4B4F00EC7BE1 /* UMSocialQQHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocialQQHandler.h; sourceTree = "<group>"; };
@@ -451,6 +452,12 @@
 		48C7AC3E210F4B9400EC7BE1 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		48C7AC40210F4B9A00EC7BE1 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		48C7AC43210F4BD900EC7BE1 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		48DCB97F219D10F9001AFB6A /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
+		48DCB980219D10F9001AFB6A /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		48DCB983219D1ABB001AFB6A /* SignViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignViewController2.m; sourceTree = "<group>"; };
+		48DCB984219D1ABC001AFB6A /* SignViewController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignViewController2.h; sourceTree = "<group>"; };
+		48DCB985219D1ABC001AFB6A /* SignViewController2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignViewController2.xib; sourceTree = "<group>"; };
+		48DCB988219D1C76001AFB6A /* signTip2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "signTip2@2x.png"; sourceTree = "<group>"; };
 		48EABBEE211C2031004B8809 /* AdvertModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvertModel.h; sourceTree = "<group>"; };
 		48EABBEF211C2031004B8809 /* AdvertModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdvertModel.m; sourceTree = "<group>"; };
 		48EABBF0211C2031004B8809 /* AdvertTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvertTableViewCell.h; sourceTree = "<group>"; };
@@ -511,6 +518,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48DCB981219D10FA001AFB6A /* GoogleMobileAds.framework in Frameworks */,
 				482A8B081BC7AD2000377B64 /* CoreMedia.framework in Frameworks */,
 				482A8B0E1BC7AD3700377B64 /* AdSupport.framework in Frameworks */,
 				482A89F21BC785BC00377B64 /* QuartzCore.framework in Frameworks */,
@@ -546,7 +554,6 @@
 				48C7AC38210F4B5000EC7BE1 /* UMCommonLog.framework in Frameworks */,
 				482A8B041BC7AD0600377B64 /* EventKit.framework in Frameworks */,
 				482A8B021BC7AD0000377B64 /* MapKit.framework in Frameworks */,
-				48C7AC2C210F4B5000EC7BE1 /* GoogleMobileAds.framework in Frameworks */,
 				482A8AF81BC7ACB400377B64 /* AddressBookUI.framework in Frameworks */,
 				482A8AF71BC7ACAE00377B64 /* AddressBook.framework in Frameworks */,
 			);
@@ -700,6 +707,7 @@
 		482A8B1C1BC7AFF500377B64 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				48DCB988219D1C76001AFB6A /* signTip2@2x.png */,
 				486026291BC7F67B00919548 /* xinxi.png */,
 				4860262A1BC7F67B00919548 /* wangsu.png */,
 				4860262B1BC7F67B00919548 /* wangluo.png */,
@@ -802,9 +810,12 @@
 		48BD7C311BBABC1700064FCE /* phoneAssist */ = {
 			isa = PBXGroup;
 			children = (
+				48DCB984219D1ABC001AFB6A /* SignViewController2.h */,
+				48DCB983219D1ABB001AFB6A /* SignViewController2.m */,
+				48DCB985219D1ABC001AFB6A /* SignViewController2.xib */,
+				48DCB97E219D10F9001AFB6A /* GoogleMobileAdsSdkiOS-7.35.2 */,
 				48EABBED211C2031004B8809 /* AdvertModel */,
 				48C7AC23210F4B4F00EC7BE1 /* 广告页面 */,
-				48C7AC03210F4B4F00EC7BE1 /* GoogleMobileAdsSdkiOS-7.31.0 */,
 				48C7AC06210F4B4F00EC7BE1 /* UMShare */,
 				48C037FC1C0311B8003C2C29 /* SDWebImage */,
 				48C037F81C030A5C003C2C29 /* JSONKit */,
@@ -964,15 +975,6 @@
 				48C0381D1C0311B8003C2C29 /* UIView+WebCacheOperation.m */,
 			);
 			path = SDWebImage;
-			sourceTree = "<group>";
-		};
-		48C7AC03210F4B4F00EC7BE1 /* GoogleMobileAdsSdkiOS-7.31.0 */ = {
-			isa = PBXGroup;
-			children = (
-				48C7AC04210F4B4F00EC7BE1 /* GoogleMobileAds.framework */,
-				48C7AC05210F4B4F00EC7BE1 /* README.txt */,
-			);
-			path = "GoogleMobileAdsSdkiOS-7.31.0";
 			sourceTree = "<group>";
 		};
 		48C7AC06210F4B4F00EC7BE1 /* UMShare */ = {
@@ -1138,6 +1140,15 @@
 				48C7AC3E210F4B9400EC7BE1 /* libsqlite3.tbd */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		48DCB97E219D10F9001AFB6A /* GoogleMobileAdsSdkiOS-7.35.2 */ = {
+			isa = PBXGroup;
+			children = (
+				48DCB97F219D10F9001AFB6A /* GoogleMobileAds.framework */,
+				48DCB980219D10F9001AFB6A /* README.txt */,
+			);
+			path = "GoogleMobileAdsSdkiOS-7.35.2";
 			sourceTree = "<group>";
 		};
 		48EABBED211C2031004B8809 /* AdvertModel */ = {
@@ -1331,7 +1342,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				482A8AB01BC7AB0B00377B64 /* SVProgressHUD.bundle in Resources */,
-				48C7AC2D210F4B5000EC7BE1 /* README.txt in Resources */,
 				486026641BC90A6300919548 /* 58.png in Resources */,
 				482A8A2B1BC7A9EB00377B64 /* NetSpeedViewController.xib in Resources */,
 				482A8A251BC7A9EB00377B64 /* SignViewController.xib in Resources */,
@@ -1343,9 +1353,11 @@
 				482A8B251BC7AFF500377B64 /* back.png in Resources */,
 				48C0383E1C03309C003C2C29 /* news.png in Resources */,
 				482A8B331BC7BAEE00377B64 /* batteryBg.png in Resources */,
+				48DCB982219D10FA001AFB6A /* README.txt in Resources */,
 				486026511BC8FB9500919548 /* MemoryViewController.xib in Resources */,
 				486026651BC90A6300919548 /* 80.png in Resources */,
 				482A8B271BC7AFF500377B64 /* NavBack@2x.png in Resources */,
+				48DCB989219D1C77001AFB6A /* signTip2@2x.png in Resources */,
 				486026661BC90A6300919548 /* 87.png in Resources */,
 				486026371BC7F67B00919548 /* dianchi.png in Resources */,
 				48C7AC37210F4B5000EC7BE1 /* UMCommonLog.bundle in Resources */,
@@ -1380,6 +1392,7 @@
 				482A8A291BC7A9EB00377B64 /* NetSpyTableViewCell.xib in Resources */,
 				48C0383C1C03298B003C2C29 /* NewsCTableViewCell.xib in Resources */,
 				482A8B281BC7AFF500377B64 /* sep_line.png in Resources */,
+				48DCB987219D1ABD001AFB6A /* SignViewController2.xib in Resources */,
 				4860263D1BC8E8D000919548 /* BatteryViewController.xib in Resources */,
 				486026361BC7F67B00919548 /* liuliang.png in Resources */,
 				486026561BC902C300919548 /* DiskViewController.xib in Resources */,
@@ -1407,6 +1420,7 @@
 			files = (
 				482A8A2C1BC7A9EB00377B64 /* NetSpeedViewController.m in Sources */,
 				486026501BC8FB9500919548 /* MemoryViewController.m in Sources */,
+				48DCB986219D1ABD001AFB6A /* SignViewController2.m in Sources */,
 				48EABC5F211C2031004B8809 /* UIWebView+AFNetworking.m in Sources */,
 				482A8ADF1BC7ABCF00377B64 /* SystemServices.m in Sources */,
 				482A8AEC1BC7ABCF00377B64 /* SSProcessInfo.m in Sources */,
@@ -1640,6 +1654,7 @@
 					"$(PROJECT_DIR)/phoneAssist/UMShare/share/share_ios_6.9.3/UMSocialUI",
 					"$(PROJECT_DIR)/phoneAssist/UMShare/thirdparties/thirdparties_ios_1.0.5",
 					"$(PROJECT_DIR)/phoneAssist/UMShare/umcommonlog/umcommonlog_ios_1.0.0",
+					"$(PROJECT_DIR)/phoneAssist/GoogleMobileAdsSdkiOS-7.35.2",
 				);
 				INFOPLIST_FILE = phoneAssist/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -1687,6 +1702,7 @@
 					"$(PROJECT_DIR)/phoneAssist/UMShare/share/share_ios_6.9.3/UMSocialUI",
 					"$(PROJECT_DIR)/phoneAssist/UMShare/thirdparties/thirdparties_ios_1.0.5",
 					"$(PROJECT_DIR)/phoneAssist/UMShare/umcommonlog/umcommonlog_ios_1.0.0",
+					"$(PROJECT_DIR)/phoneAssist/GoogleMobileAdsSdkiOS-7.35.2",
 				);
 				INFOPLIST_FILE = phoneAssist/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

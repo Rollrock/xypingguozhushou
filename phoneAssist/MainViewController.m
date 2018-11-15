@@ -9,6 +9,7 @@
 #import "MainViewController.h"
 #import "UIScrollView+UITouch.h"
 #import "SignViewController.h"
+#import "SignViewController2.h"
 #import "NetSpeedViewController.h"
 #import "NetSpyViewController.h"
 //#import "BaiduMobAdView.h"
@@ -25,11 +26,14 @@
 #import "WebAdvViewController.h"
 
 #import "AdvertViewController.h"
+#import "SystemServices.h"
+
+#define SystemSharedServices [SystemServices sharedServices]
 
 @import GoogleMobileAds;
 
 //
-@interface MainViewController ()<GADInterstitialDelegate>//<BaiduMobAdViewDelegate>
+@interface MainViewController ()<GADInterstitialDelegate>
 @property (weak, nonatomic) IBOutlet UIView *view_1;
 @property (weak, nonatomic) IBOutlet UIView *view_2;
 @property (weak, nonatomic) IBOutlet UIView *view_3;
@@ -75,17 +79,21 @@
         _appImg.hidden = YES;
         _appLab.hidden = YES;
     }
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(4 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        if (self.interstitial.isReady) {
-            [self.interstitial presentFromRootViewController:self];
-        }
-    });
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    if (self.interstitial.isReady)
+    {
+        [self.interstitial presentFromRootViewController:self];
+    }
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
@@ -98,10 +106,21 @@
     
     if( CGRectContainsPoint(_view_1.bounds, pt) )
     {
-        SignViewController * vc = [[SignViewController alloc]initWithNibName:@"SignViewController" bundle:nil];
-        [self.navigationController pushViewController:vc animated:YES];
+        if( [[SystemSharedServices country] isEqualToString:@"zh_CN"] )
+        {
+            SignViewController * vc = [[SignViewController alloc]initWithNibName:@"SignViewController" bundle:nil];
+            [self.navigationController pushViewController:vc animated:YES];
+            
+            return;
+        }
+        else
+        {
+            SignViewController2 * vc = [[SignViewController2 alloc]initWithNibName:@"SignViewController2" bundle:nil];
+            [self.navigationController pushViewController:vc animated:YES];
+            
+            return;
+        }
         
-         return;
     }
     
     
@@ -217,7 +236,7 @@
         CGPoint pt ;
         
         pt = CGPointMake(0, 0);
-        GADBannerView * _bannerView = [[GADBannerView alloc] initWithAdSize:kGADAdSizeFullBanner origin:pt];
+        GADBannerView * _bannerView = [[GADBannerView alloc] initWithAdSize:kGADAdSizeSmartBannerPortrait origin:pt];
         
         _bannerView.adUnitID = ADMOB_ADV_ID;
         _bannerView.rootViewController = self;
@@ -226,16 +245,14 @@
         [_bannerView loadRequest:req];
         
         [_advView2 addSubview:_bannerView];
-
     }
     
     //
     {
-    
         CGPoint pt ;
         
         pt = CGPointMake(0, 0);
-        GADBannerView * _bannerView = [[GADBannerView alloc] initWithAdSize:kGADAdSizeFullBanner origin:pt];
+        GADBannerView * _bannerView = [[GADBannerView alloc] initWithAdSize:kGADAdSizeSmartBannerPortrait origin:pt];
         
         _bannerView.adUnitID = ADMOB_ADV_ID_2;
         _bannerView.rootViewController = self;
