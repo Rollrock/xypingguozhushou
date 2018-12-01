@@ -67,7 +67,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="流量" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CcD-hm-deu">
-                                                    <rect key="frame" x="68" y="22" width="22" height="149.5"/>
+                                                    <rect key="frame" x="68" y="22" width="22" height="150"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="22" id="dDe-rC-LDM"/>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="22" id="o5u-L3-Wst"/>
@@ -144,18 +144,18 @@
                                                 </mask>
                                             </variation>
                                         </view>
-                                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eRp-zX-QRc">
-                                            <rect key="frame" x="5" y="208" width="193" height="194"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eRp-zX-QRc">
+                                            <rect key="frame" x="5" y="208" width="193.5" height="193.5"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wangluo.png" translatesAutoresizingMaskIntoConstraints="NO" id="7Ft-6B-BmA">
-                                                    <rect key="frame" x="20" y="79.5" width="40" height="35"/>
+                                                    <rect key="frame" x="20" y="78.5" width="40" height="35"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="40" id="CB6-kZ-u4d"/>
                                                         <constraint firstAttribute="height" constant="35" id="xD8-zc-k0U"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="网络监控" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JkN-sg-agC">
-                                                    <rect key="frame" x="70" y="6" width="20" height="182"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="网络监控" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JkN-sg-agC">
+                                                    <rect key="frame" x="70" y="6" width="20" height="181.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="20" id="D7x-Hy-BBq"/>
                                                     </constraints>
@@ -185,8 +185,8 @@
                                         <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N3L-gL-XWm">
                                             <rect key="frame" x="203" y="208" width="194" height="194"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="存储空间" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ij-pr-Tbr">
-                                                    <rect key="frame" x="80" y="0.0" width="20" height="194"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="存储空间" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ij-pr-Tbr">
+                                                    <rect key="frame" x="80" y="0.0" width="20" height="193.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="20" id="gMh-Yp-hdE"/>
                                                     </constraints>
@@ -220,11 +220,11 @@
                                                 </mask>
                                             </variation>
                                         </view>
-                                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MPj-F6-tRE">
-                                            <rect key="frame" x="402" y="208" width="193" height="194"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MPj-F6-tRE">
+                                            <rect key="frame" x="401.5" y="208" width="193.5" height="193.5"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="内存" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rib-fz-Vso">
-                                                    <rect key="frame" x="75" y="0.0" width="20" height="194"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="内存" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rib-fz-Vso">
+                                                    <rect key="frame" x="75" y="0.0" width="20" height="193.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="20" id="cit-7j-1iB"/>
                                                     </constraints>
@@ -300,14 +300,14 @@
                                             <rect key="frame" x="203" y="407" width="194" height="193"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xinxi.png" translatesAutoresizingMaskIntoConstraints="NO" id="LVY-24-FfT">
-                                                    <rect key="frame" x="20" y="76.5" width="40" height="40"/>
+                                                    <rect key="frame" x="20" y="77.5" width="40" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="40" id="hWt-fU-Zvu"/>
                                                         <constraint firstAttribute="height" constant="40" id="v8C-Sy-QQZ"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="手机信息" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ndd-el-dT9">
-                                                    <rect key="frame" x="70" y="0.0" width="20" height="193.5"/>
+                                                    <rect key="frame" x="70" y="0.0" width="20" height="194"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="20" id="N5W-5Q-hz7"/>
                                                     </constraints>
@@ -337,7 +337,7 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sku-jx-ZaN">
                                             <rect key="frame" x="401.5" y="406.5" width="193.5" height="193.5"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="精品推荐" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbG-Ja-YgB">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="关于我们" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbG-Ja-YgB">
                                                     <rect key="frame" x="60" y="0.0" width="20" height="193.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="20" id="4CS-tU-Slr"/>

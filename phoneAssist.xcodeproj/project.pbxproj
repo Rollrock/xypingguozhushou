@@ -20,8 +20,6 @@
 		482A8A041BC785F400377B64 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 482A8A031BC785F400377B64 /* CoreGraphics.framework */; };
 		482A8A231BC7A9EB00377B64 /* SpeedResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 482A8A141BC7A9EB00377B64 /* SpeedResultViewController.xib */; };
 		482A8A241BC7A9EB00377B64 /* SpeedResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 482A8A151BC7A9EB00377B64 /* SpeedResultViewController.m */; };
-		482A8A251BC7A9EB00377B64 /* SignViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 482A8A171BC7A9EB00377B64 /* SignViewController.xib */; };
-		482A8A261BC7A9EB00377B64 /* SignViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 482A8A181BC7A9EB00377B64 /* SignViewController.m */; };
 		482A8A271BC7A9EB00377B64 /* NetSpyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 482A8A1A1BC7A9EB00377B64 /* NetSpyViewController.xib */; };
 		482A8A281BC7A9EB00377B64 /* NetSpyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 482A8A1B1BC7A9EB00377B64 /* NetSpyViewController.m */; };
 		482A8A291BC7A9EB00377B64 /* NetSpyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 482A8A1D1BC7A9EB00377B64 /* NetSpyTableViewCell.xib */; };
@@ -226,9 +224,6 @@
 		482A8A141BC7A9EB00377B64 /* SpeedResultViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpeedResultViewController.xib; sourceTree = "<group>"; };
 		482A8A151BC7A9EB00377B64 /* SpeedResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeedResultViewController.m; sourceTree = "<group>"; };
 		482A8A161BC7A9EB00377B64 /* SpeedResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeedResultViewController.h; sourceTree = "<group>"; };
-		482A8A171BC7A9EB00377B64 /* SignViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignViewController.xib; sourceTree = "<group>"; };
-		482A8A181BC7A9EB00377B64 /* SignViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignViewController.m; sourceTree = "<group>"; };
-		482A8A191BC7A9EB00377B64 /* SignViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignViewController.h; sourceTree = "<group>"; };
 		482A8A1A1BC7A9EB00377B64 /* NetSpyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NetSpyViewController.xib; sourceTree = "<group>"; };
 		482A8A1B1BC7A9EB00377B64 /* NetSpyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetSpyViewController.m; sourceTree = "<group>"; };
 		482A8A1C1BC7A9EB00377B64 /* NetSpyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetSpyViewController.h; sourceTree = "<group>"; };
@@ -840,9 +835,6 @@
 				482A8A141BC7A9EB00377B64 /* SpeedResultViewController.xib */,
 				482A8A151BC7A9EB00377B64 /* SpeedResultViewController.m */,
 				482A8A161BC7A9EB00377B64 /* SpeedResultViewController.h */,
-				482A8A171BC7A9EB00377B64 /* SignViewController.xib */,
-				482A8A181BC7A9EB00377B64 /* SignViewController.m */,
-				482A8A191BC7A9EB00377B64 /* SignViewController.h */,
 				482A8A1A1BC7A9EB00377B64 /* NetSpyViewController.xib */,
 				482A8A1B1BC7A9EB00377B64 /* NetSpyViewController.m */,
 				482A8A1C1BC7A9EB00377B64 /* NetSpyViewController.h */,
@@ -1300,7 +1292,7 @@
 				TargetAttributes = {
 					48BD7C2E1BBABC1700064FCE = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = 398SEH57CU;
+						DevelopmentTeam = 9K4N62H9GU;
 						SystemCapabilities = {
 							com.apple.InAppPurchase = {
 								enabled = 0;
@@ -1344,7 +1336,6 @@
 				482A8AB01BC7AB0B00377B64 /* SVProgressHUD.bundle in Resources */,
 				486026641BC90A6300919548 /* 58.png in Resources */,
 				482A8A2B1BC7A9EB00377B64 /* NetSpeedViewController.xib in Resources */,
-				482A8A251BC7A9EB00377B64 /* SignViewController.xib in Resources */,
 				486026341BC7F67B00919548 /* qiandao.png in Resources */,
 				48EABC4A211C2031004B8809 /* AdvertViewController.xib in Resources */,
 				481303A31BFA08E4001383DB /* WebViewController.xib in Resources */,
@@ -1457,7 +1448,6 @@
 				48C038231C0311B8003C2C29 /* SDWebImageDownloader.m in Sources */,
 				48C038271C0311B8003C2C29 /* UIButton+WebCache.m in Sources */,
 				482A8AB21BC7AB0B00377B64 /* RFRateMe.m in Sources */,
-				482A8A261BC7A9EB00377B64 /* SignViewController.m in Sources */,
 				48EABC60211C2031004B8809 /* JSON.m in Sources */,
 				482A8A241BC7A9EB00377B64 /* SpeedResultViewController.m in Sources */,
 				486026591BC9033700919548 /* VWWWaterView.m in Sources */,
@@ -1568,8 +1558,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: chaoxiao zhuang (6WG3G5Z64E)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: chaoxiao zhuang (6WG3G5Z64E)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Xiaowei Jiang (8H7TDY7T7G)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Xiaowei Jiang (8H7TDY7T7G)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_BITCODE = NO;
@@ -1613,8 +1603,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: chaoxiao zhuang (398SEH57CU)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: chaoxiao zhuang (398SEH57CU)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Shenzhen wave Health Technology Co. Ltd (9K4N62H9GU)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Shenzhen wave Health Technology Co. Ltd (9K4N62H9GU)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_BITCODE = NO;
@@ -1640,9 +1630,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: chaoxiao zhuang (6WG3G5Z64E)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: chaoxiao zhuang (6WG3G5Z64E)";
-				DEVELOPMENT_TEAM = 398SEH57CU;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Xiaowei Jiang (8H7TDY7T7G)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Xiaowei Jiang (8H7TDY7T7G)";
+				DEVELOPMENT_TEAM = 9K4N62H9GU;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1678,8 +1668,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rock.phoneAssist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b2693f1b-2fcd-41f4-87d5-d7ed569ef035";
-				PROVISIONING_PROFILE_SPECIFIER = com_rock_wide_dev;
+				PROVISIONING_PROFILE = "8919f3f3-3c85-4cd0-8888-fcde323830f2";
+				PROVISIONING_PROFILE_SPECIFIER = phoneAssist_dev;
 			};
 			name = Debug;
 		};
@@ -1688,9 +1678,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: chaoxiao zhuang (398SEH57CU)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: chaoxiao zhuang (398SEH57CU)";
-				DEVELOPMENT_TEAM = 398SEH57CU;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Shenzhen wave Health Technology Co. Ltd (9K4N62H9GU)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Shenzhen wave Health Technology Co. Ltd (9K4N62H9GU)";
+				DEVELOPMENT_TEAM = 9K4N62H9GU;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1726,8 +1716,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rock.phoneAssist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "44c6542c-df5d-4bee-b5e6-ec68d0099f95";
-				PROVISIONING_PROFILE_SPECIFIER = com_rock_wide_dis;
+				PROVISIONING_PROFILE = "8656efe6-6cf0-4b23-aa00-8475c4720f40";
+				PROVISIONING_PROFILE_SPECIFIER = phoneAssist_dis;
 			};
 			name = Release;
 		};

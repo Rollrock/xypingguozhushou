@@ -8,11 +8,9 @@
 
 #import "MainViewController.h"
 #import "UIScrollView+UITouch.h"
-#import "SignViewController.h"
 #import "SignViewController2.h"
 #import "NetSpeedViewController.h"
 #import "NetSpyViewController.h"
-//#import "BaiduMobAdView.h"
 #import "CommData.h"
 #import "BatteryViewController.h"
 #import "PhoneInfoViewController.h"
@@ -73,12 +71,6 @@
     [self layoutADV];
     
     [self createAndLoadInterstitial];
-    
-    if(![self showApps] )
-    {
-        _appImg.hidden = YES;
-        _appLab.hidden = YES;
-    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -106,23 +98,11 @@
     
     if( CGRectContainsPoint(_view_1.bounds, pt) )
     {
-        if( [[SystemSharedServices country] isEqualToString:@"zh_CN"] )
-        {
-            SignViewController * vc = [[SignViewController alloc]initWithNibName:@"SignViewController" bundle:nil];
-            [self.navigationController pushViewController:vc animated:YES];
-            
-            return;
-        }
-        else
-        {
-            SignViewController2 * vc = [[SignViewController2 alloc]initWithNibName:@"SignViewController2" bundle:nil];
-            [self.navigationController pushViewController:vc animated:YES];
-            
-            return;
-        }
+        SignViewController2 * vc = [[SignViewController2 alloc]initWithNibName:@"SignViewController2" bundle:nil];
+        [self.navigationController pushViewController:vc animated:YES];
         
+        return;
     }
-    
     
     pt = [t locationInView:_view_2];
     if( CGRectContainsPoint(_view_2.bounds, pt) )
@@ -192,6 +172,11 @@
     pt = [t locationInView:_view_9];
     if( CGRectContainsPoint(_view_9.bounds, pt) )
     {
+
+        AdvertViewController * vc = [AdvertViewController new];
+        [self.navigationController pushViewController:vc animated:YES];
+        
+/*
         if(![self showApps] )
         {
             return;
@@ -226,6 +211,8 @@
         
         
         return;
+ 
+ */
     }
 }
 

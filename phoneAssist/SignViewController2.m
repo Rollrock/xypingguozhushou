@@ -42,7 +42,7 @@
     
     [self createAndLoadInterstitial];
     
-    self.title = @"签到赚话费";
+    self.title = @"天天签到";
     
     [self getSignInfo];
     

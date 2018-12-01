@@ -57,18 +57,6 @@
             [self.array addObject:m];
         }
     }
-
-    //
-    if( [self showScore ] )
-    {
-        [self hideView2];
-        
-        ((UILabel*)[[self.view viewWithTag:102] viewWithTag:99]).text = @"分享给好友去掉广告";
-    }
-    else
-    {
-        [self hideView1];
-    }
     
     UITapGestureRecognizer * g = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(view1Clicked)];
     [[self.view viewWithTag:100] addGestureRecognizer:g];
@@ -80,31 +68,6 @@
     [[self.view viewWithTag:102] addGestureRecognizer:g];
 }
 
--(BOOL)showScore
-{
-    NSDateComponents * data = [[NSDateComponents alloc]init];
-    NSCalendar * cal = [NSCalendar currentCalendar];
-    
-    [data setCalendar:cal];
-    [data setYear:SHOW_APP_YEAR];
-    [data setMonth:SHOW_APP_MONTH];
-    [data setDay:SHOW_APP_DAY];
-    
-    
-    NSDate * farDate = [cal dateFromComponents:data];
-    
-    NSDate *now = [NSDate date];
-    
-    NSTimeInterval farSec = [farDate timeIntervalSince1970];
-    NSTimeInterval nowSec = [now timeIntervalSince1970];
-    
-    if( (nowSec - farSec >= 0) || [AdvertModel mustScore] )
-    {
-        return YES;
-    }
-    
-    return NO;
-}
 
 -(void)view1Clicked
 {
